@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">医療機器商社 サトウ商会</title><desc id="desc">赤い円相に佐の文字、梅の花、社名、代表者名を配した和風ロゴ</desc>
+<rect width="1200" height="760" rx="32" fill="#fff"/>
+<circle cx="260" cy="365" r="205" fill="none" stroke="#a9241b" stroke-width="25" stroke-linecap="round" stroke-dasharray="1090 145" transform="rotate(-14 260 365)"/>
+<circle cx="260" cy="365" r="180" fill="none" stroke="#d14a3e" stroke-width="5" opacity=".45"/>
+<text x="260" y="452" text-anchor="middle" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="250" font-weight="900" fill="#15242c">佐</text>
+<rect x="55" y="515" width="115" height="115" rx="14" fill="#fff" stroke="#ae2a20" stroke-width="6"/><text x="113" y="555" text-anchor="middle" font-family="serif" font-size="28" fill="#ae2a20">創業</text><text x="113" y="593" text-anchor="middle" font-family="serif" font-size="28" fill="#ae2a20">六十年</text>
+<text x="505" y="245" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="59" font-weight="800" fill="#15242c" letter-spacing="8">医療機器商社</text>
+<line x1="505" y1="275" x2="1055" y2="275" stroke="#b5893b" stroke-width="5"/>
+<text x="500" y="410" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="95" font-weight="900" fill="#15242c" letter-spacing="4">サトウ商会</text>
+<text x="550" y="500" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="47" font-weight="800" fill="#15242c" letter-spacing="5">社長 佐藤 孝子</text>
+<text x="505" y="580" font-family="Yu Mincho,Hiragino Mincho ProN,serif" font-size="28" font-weight="700" fill="#3d4b53" letter-spacing="4">人と医療をつなぎ　地域の健康を支える</text>
+<path d="M885 100c55 30 100 65 148 122M955 145c51-34 96-30 133 3M1022 206c41-35 78-29 105 3" fill="none" stroke="#172129" stroke-width="9" stroke-linecap="round"/>
+<g fill="#b62b20"><circle cx="927" cy="123" r="18"/><circle cx="986" cy="150" r="22"/><circle cx="1045" cy="198" r="19"/><circle cx="973" cy="205" r="17"/><circle cx="1075" cy="132" r="15"/></g>
+<path d="M95 660h265M110 690h205M985 620h130" stroke="#b5893b" stroke-width="12" stroke-linecap="round" opacity=".65"/>
+</svg>
