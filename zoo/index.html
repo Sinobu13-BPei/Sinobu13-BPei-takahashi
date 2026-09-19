@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ZOO 雀士名鑑 & 相性分析</title>
+  <style>
+    html,body{margin:0;min-height:100%;background:#07271d;color:#ece4cf;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+    .loading{min-height:100vh;display:grid;place-items:center;padding:24px;text-align:center}
+    .box{max-width:560px;border:1px solid #2b5c4a;border-radius:16px;padding:28px;background:#0b3226}
+    .err{color:#f3c9c6}
+  </style>
+</head>
+<body>
+  <div class="loading"><div class="box" id="status">ZOO を読み込んでいます…</div></div>
+  <script>
+  (async()=>{
+    try{
+      const files=['parts/part1.b64','parts/part2.b64','parts/part3.b64'];
+      const parts=await Promise.all(files.map(async f=>{
+        const r=await fetch(f,{cache:'no-store'});
+        if(!r.ok) throw new Error(f+' '+r.status);
+        return (await r.text()).trim();
+      }));
+      const b64=parts.join('');
+      const bin=atob(b64);
+      const bytes=new Uint8Array(bin.length);
+      for(let i=0;i<bin.length;i++) bytes[i]=bin.charCodeAt(i);
+      const html=new TextDecoder('utf-8').decode(bytes);
+      document.open();
+      document.write(html);
+      document.close();
+    }catch(e){
+      document.getElementById('status').innerHTML='<strong class="err">読み込みに失敗しました。</strong><br><small>'+String(e)+'</small>';
+    }
+  })();
+  </script>
+</body>
+</html>
