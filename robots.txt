@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sinobu13-bpei.github.io/takahashi/sitemap.xml
