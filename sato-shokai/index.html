@@ -1,136 +1,58 @@
 <!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f7f3eb">
 <title>株式会社サトウ商会｜医療機器・画像診断機器のご相談</title>
-<meta name="description" content="東京都文京区湯島の医療機器商社、株式会社サトウ商会。画像診断機器、病院・診療所・健診施設・研究機関・動物病院のお困りごとをご相談ください。">
+<meta name="description" content="東京都文京区湯島の医療機器商社、株式会社サトウ商会。CT、MRI、一般X線、マンモグラフィ、超音波など画像診断機器の導入・更新・下取りをご相談ください。">
 <style>
-:root{
-  --ink:#16242c; --navy:#17364b; --red:#9e241b; --red2:#c0392b;
-  --gold:#b68a3b; --paper:#f7f3eb; --paper2:#efe7da; --white:#fff;
-  --muted:#6b7377; --line:#ddd5c8; --soft:#fdfbf7;
-  --shadow:0 24px 70px rgba(28,34,38,.10);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);
-font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;line-height:1.75}
-a{color:inherit}
-.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-.kicker{font-size:11px;font-weight:900;letter-spacing:.24em;color:var(--red)}
-h1,h2,h3,p{margin-top:0}
-h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(44px,6vw,76px);line-height:1.12;letter-spacing:-.03em}
-h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(30px,4.4vw,52px);line-height:1.2}
-h3{font-size:22px}
-.small{font-size:12px;color:var(--muted)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;
-font-weight:800;text-decoration:none;border:1px solid var(--ink);background:#fff;transition:.2s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--red);border-color:var(--red);color:#fff}
-.btn.ghost{background:transparent}
-.topline{background:#172129;color:#fff;font-size:12px}
-.topline .wrap{height:34px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.nav{position:sticky;top:0;z-index:30;background:rgba(247,243,235,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(130,110,90,.15)}
-.nav .wrap{height:72px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brandmark{width:42px;height:42px;border-radius:50%;border:3px solid var(--red);display:grid;place-items:center;
-font-family:"Yu Mincho",serif;font-size:22px;font-weight:900}
-.brandname{font-family:"Yu Mincho",serif;font-weight:900;letter-spacing:.12em}
-.navlinks{display:flex;gap:22px;align-items:center;font-size:13px}
-.navlinks a{text-decoration:none}
-.hero{position:relative;overflow:hidden;padding:70px 0 58px}
-.hero:before{content:"";position:absolute;inset:-150px auto auto -160px;width:420px;height:420px;border-radius:50%;border:48px solid rgba(158,36,27,.06)}
-.hero:after{content:"";position:absolute;right:-100px;bottom:-140px;width:360px;height:360px;border-radius:50%;background:rgba(182,138,59,.08)}
-.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center;position:relative;z-index:1}
-.hero p.lead{font-size:clamp(17px,2vw,22px);color:#41515b;max-width:700px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.promise{margin-top:30px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
-.promise div{padding:16px 16px 0 0}
-.promise strong{display:block;font-family:"Yu Mincho",serif;font-size:19px}
-.visual{position:relative}
-.visual .frame{background:#fff;border:1px solid var(--line);border-radius:30px;padding:18px;box-shadow:var(--shadow)}
-.visual .stamp{position:absolute;right:-12px;bottom:-18px;background:var(--red);color:white;border-radius:50%;width:92px;height:92px;display:grid;place-items:center;text-align:center;font-size:12px;font-weight:900;border:7px solid var(--paper)}
-.visual .stamp span{display:block;font-size:19px;font-family:"Yu Mincho",serif}
-.section{padding:86px 0}
-.section.white{background:var(--white)}
-.section.dark{background:#152832;color:#fff}
-.section.gold{background:linear-gradient(180deg,#f0e7d8,#f7f3eb)}
-.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:end;margin-bottom:38px}
-.section-head p{color:var(--muted);margin-bottom:4px}
-.dark .section-head p{color:#cbd6da}
-.modality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.modality{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;min-height:220px;position:relative;overflow:hidden}
-.modality .no{position:absolute;right:16px;top:10px;font-family:"Yu Mincho",serif;font-size:54px;color:#efe8dc}
-.modality svg{width:78px;height:78px;color:var(--navy)}
-.modality h3{margin:10px 0 5px}
-.modality p{font-size:14px;color:#5c686f;margin:0}
-.modality .tag{display:inline-block;margin-top:14px;padding:4px 9px;border-radius:999px;background:#f3eee6;font-size:11px;font-weight:800;color:#725f4c}
-.value-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:start}
-.quote{font-family:"Yu Mincho",serif;font-size:clamp(30px,4.2vw,52px);line-height:1.55}
-.quote .red{color:#ef8f83}
-.values{display:grid;gap:12px}
-.value{border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:18px;background:rgba(255,255,255,.04)}
-.value b{display:block;color:#efcf91;margin-bottom:5px}
-.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;position:relative}
-.step .n{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-weight:900;font-size:12px;margin-bottom:14px}
-.step strong{display:block;margin-bottom:6px}
-.step p{font-size:13px;color:#667277;margin:0}
-.relation{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
-.diagram,.mapcard{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden}
-.diagram{padding:28px}
-.diagram svg{width:100%;height:auto;display:block}
-.mapcard iframe{width:100%;height:330px;border:0;display:block}
-.mapinfo{padding:22px}
-.contact{padding:72px 0;background:linear-gradient(135deg,#8f2118,#b72d22);color:#fff}
-.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center}
-.contact h2{margin-bottom:12px}
-.contact .mail{font-size:clamp(18px,2vw,26px);font-weight:900;text-decoration:none}
-.contact .btn{border-color:#fff}
-.contact .btn.primary{background:#fff;color:var(--red)}
-.compliance-strip{padding:22px 0;background:#eee7dc;border-top:1px solid #ded4c5}
-.compliance-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:22px}
-.compliance-strip p{margin:0;font-size:12px;color:#656e72}
-.footer{padding:32px 0 48px;font-size:12px;color:#7c8386}
-@media(max-width:920px){
-  .hero-grid,.section-head,.value-grid,.relation,.contact-grid{grid-template-columns:1fr}
-  .modality-grid{grid-template-columns:1fr 1fr}
-  .flow{grid-template-columns:1fr 1fr}
-  .navlinks a:not(.btn){display:none}
-}
-@media(max-width:620px){
-  .wrap{width:min(100% - 26px,1180px)} .topline{display:none}
-  .nav .wrap{height:64px} .brandname{font-size:14px}
-  .hero{padding-top:46px} .promise{grid-template-columns:1fr}
-  .modality-grid,.flow{grid-template-columns:1fr}
-  .visual .stamp{width:76px;height:76px}
-  .section{padding:64px 0}
-  .compliance-strip .wrap{display:block}
-}
-</style>
-</head>
-<body>
-<div class="topline"><div class="wrap"><span>東京都文京区湯島の医療機器商社</span><span>TEL 03-3814-0381</span></div></div>
-<header class="nav"><div class="wrap"><a class="brand" href="#top"><span class="brandmark">佐</span><span class="brandname">株式会社 サトウ商会</span></a><div class="navlinks"><a href="#service">取扱領域</a><a href="#style">私たちの仕事</a><a href="#access">アクセス</a><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">お問い合わせ</a></div></div></header>
+:root{--ink:#17232a;--navy:#17384d;--red:#9e241b;--gold:#b68a3b;--paper:#f7f3eb;--white:#fff;--muted:#68747a;--line:#ded6c9;--shadow:0 22px 60px rgba(23,35,42,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Meiryo,sans-serif;line-height:1.7}a{color:inherit}.wrap{width:min(1180px,calc(100% - 40px));margin:auto}.kicker{font-size:11px;letter-spacing:.22em;font-weight:900;color:var(--red)}h1,h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;line-height:1.16}h1{font-size:clamp(44px,6vw,76px);letter-spacing:-.03em;margin:.22em 0 .25em}h2{font-size:clamp(30px,4.4vw,52px);margin:.2em 0}h3{margin:.2em 0 .45em;font-size:22px}p{margin-top:0}.small{font-size:12px;color:var(--muted)}
+.top{background:#172129;color:#fff;font-size:12px}.top .wrap{height:34px;display:flex;align-items:center;justify-content:space-between;gap:16px}.nav{position:sticky;top:0;z-index:30;background:rgba(247,243,235,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(120,100,80,.16)}.nav .wrap{height:70px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.mark{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:3px solid var(--red);font-family:serif;font-weight:900;font-size:21px}.brand b{font-family:"Yu Mincho",serif;letter-spacing:.1em}.links{display:flex;gap:20px;align-items:center;font-size:13px}.links a{text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 18px;border-radius:999px;border:1px solid var(--ink);background:#fff;text-decoration:none;font-weight:800;cursor:pointer}.btn.primary{background:var(--red);border-color:var(--red);color:#fff}.btn.soft{border-color:#d6c7b5;background:#fbf8f2}
+.hero{padding:66px 0 58px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;right:-120px;bottom:-150px;width:380px;height:380px;border-radius:50%;background:rgba(182,138,59,.08)}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:58px;align-items:center;position:relative;z-index:1}.lead{font-size:clamp(17px,2vw,22px);color:#42515a;max-width:700px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.three{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:30px}.three div{padding:15px 14px 0 0}.three strong{display:block;font-family:"Yu Mincho",serif;font-size:18px}.hero-art{background:#fff;border-radius:28px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line)}.hero-art svg{width:100%;height:auto;display:block}
+.section{padding:82px 0}.section.white{background:#fff}.section.dark{background:#152832;color:#fff}.section.gold{background:linear-gradient(180deg,#efe6d6,#f7f3eb)}.section-head{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:end;margin-bottom:34px}.section-head p{color:var(--muted);margin-bottom:4px}.products{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.product{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 12px 32px rgba(28,35,40,.055)}.product-media{height:285px;background:#f7f7f5;display:grid;place-items:center;padding:18px}.product-media img{max-width:100%;max-height:100%;object-fit:contain;display:block}.product-body{padding:22px}.product-top{display:flex;justify-content:space-between;align-items:start;gap:12px}.tag{display:inline-block;font-size:10px;letter-spacing:.16em;font-weight:900;color:var(--red)}.product p{font-size:14px;color:#56636a}.source{font-size:11px;color:#7b8386;margin-top:14px}.featured{border:2px solid rgba(158,36,27,.28)}.price{font-family:"Yu Mincho",serif;font-size:32px;color:var(--red);font-weight:900;white-space:nowrap}.price small{font:600 11px sans-serif;color:#6d7478}
+.orderbox{margin-top:18px;padding:18px;background:#fbf7f0;border:1px solid #e4d9c8;border-radius:16px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:800}input,select,textarea{width:100%;padding:10px 11px;border:1px solid #cfc7bb;border-radius:9px;background:#fff;font:inherit}textarea{min-height:74px;resize:vertical}.check{display:flex;gap:8px;align-items:flex-start;font-size:12px;margin:12px 0}.check input{width:auto;margin-top:5px}.order-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.notice{font-size:11px;color:#667176;margin-top:10px}
+.value-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}.quote{font-family:"Yu Mincho",serif;font-size:clamp(30px,4vw,50px);line-height:1.55}.quote em{font-style:normal;color:#ef958a}.values{display:grid;grid-template-columns:1fr 1fr;gap:12px}.value{border:1px solid rgba(255,255,255,.15);border-radius:16px;padding:17px;background:rgba(255,255,255,.04)}.value b{display:block;color:#efcf91}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.step{background:#fff;border:1px solid var(--line);border-radius:17px;padding:19px}.n{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;background:var(--red);color:#fff;font-size:11px;font-weight:900;margin-bottom:12px}.step p{font-size:13px;color:#667277;margin:0}
+.access{display:grid;grid-template-columns:1fr 1fr;gap:25px}.diagram,.map{background:#fff;border:1px solid var(--line);border-radius:23px;overflow:hidden}.diagram{padding:24px}.diagram svg{width:100%;height:auto}.map iframe{width:100%;height:330px;border:0;display:block}.mapinfo{padding:20px}.contact{padding:68px 0;background:linear-gradient(135deg,#8e2118,#b72d22);color:#fff}.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}.mail{font-weight:900;font-size:clamp(18px,2vw,26px);text-decoration:none}.compliance{padding:20px 0;background:#eee7dc;border-top:1px solid #ded4c5}.compliance .wrap{display:flex;justify-content:space-between;gap:22px;align-items:center}.compliance p{font-size:12px;color:#667176;margin:0}footer{padding:30px 0 45px;font-size:12px;color:#7a8286}
+@media(max-width:900px){.hero-grid,.section-head,.value-grid,.access,.contact-grid{grid-template-columns:1fr}.products{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.links a:not(.btn){display:none}}
+@media(max-width:620px){.wrap{width:min(100% - 26px,1180px)}.top{display:none}.nav .wrap{height:62px}.brand b{font-size:14px}.three,.values,.flow,.formgrid{grid-template-columns:1fr}.section{padding:62px 0}.product-media{height:230px}}
+</style></head><body>
+<div class="top"><div class="wrap"><span>東京都文京区湯島の医療機器商社</span><span>TEL 03-3814-0381</span></div></div>
+<header class="nav"><div class="wrap"><a class="brand" href="#top"><span class="mark">佐</span><b>株式会社 サトウ商会</b></a><nav class="links"><a href="#products">取扱製品</a><a href="#style">私たちの仕事</a><a href="#access">アクセス</a><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">お問い合わせ</a></nav></div></header>
 <main id="top">
-<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">SATO SHOKAI · YUSHIMA, TOKYO</div><h1>医療の困りごとに、<br>人として向き合う。</h1><p class="lead">医療機器の導入・更新・下取りから、病院・診療所・健診施設・研究機関・動物病院の「どこに相談したらよいか分からない」まで。まずは、事情をお聞かせください。</p><div class="actions"><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">メールで相談する</a><a class="btn ghost" href="tel:0338140381">03-3814-0381</a></div><div class="promise"><div><strong>人を大切に</strong><span class="small">困っている方の事情から考える</span></div><div><strong>医療を大切に</strong><span class="small">装置の先にある現場を見る</span></div><div><strong>よろず相談</strong><span class="small">相談先が分からない時の入口に</span></div></div></div>
-<div class="visual"><div class="frame"><svg viewBox="0 0 720 520" role="img" aria-label="医療機器商社 サトウ商会"><rect width="720" height="520" rx="26" fill="#fff"/><circle cx="198" cy="250" r="142" fill="none" stroke="#a1261d" stroke-width="18" stroke-linecap="round" stroke-dasharray="730 75" transform="rotate(-10 198 250)"/><circle cx="198" cy="250" r="125" fill="none" stroke="#cf3c31" stroke-width="4" opacity=".5"/><text x="198" y="300" text-anchor="middle" font-size="175" font-weight="900" font-family="serif" fill="#16242c">佐</text><text x="382" y="152" font-size="34" font-weight="800" font-family="serif" fill="#16242c" letter-spacing="7">医療機器商社</text><line x1="382" y1="175" x2="655" y2="175" stroke="#b68a3b" stroke-width="4"/><text x="382" y="272" font-size="68" font-weight="900" font-family="serif" fill="#16242c" letter-spacing="3">サトウ商会</text><text x="405" y="334" font-size="29" font-weight="800" font-family="serif" fill="#16242c" letter-spacing="5">社長 佐藤 孝子</text><text x="382" y="399" font-size="20" font-weight="700" font-family="serif" fill="#526068" letter-spacing="3">人と医療をつなぎ　地域の健康を支える</text><path d="M562 76c18 13 32 26 47 45M592 97c18-12 33-10 47 3M616 120c14-13 27-10 36 0" fill="none" stroke="#172129" stroke-width="4" stroke-linecap="round"/><g fill="#b62b20"><circle cx="582" cy="86" r="9"/><circle cx="612" cy="96" r="11"/><circle cx="638" cy="119" r="9"/><circle cx="601" cy="118" r="8"/></g><path d="M80 430h210M90 449h145" stroke="#b68a3b" stroke-width="7" stroke-linecap="round" opacity=".7"/></svg></div><div class="stamp"><div><span>since</span>1965</div></div></div></div></section>
-<section class="section white" id="service"><div class="wrap"><div class="section-head"><div><div class="kicker">OUR FIELD</div><h2>画像診断を中心に、<br>幅広くご相談ください。</h2></div><p>一般向けの公開ページでは個別製品の性能・価格を訴求せず、サトウ商会が対応する相談領域を中心に掲載しています。</p></div><div class="modality-grid">
-<article class="modality"><div class="no">01</div><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="36" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="50" cy="50" r="18" fill="none" stroke="currentColor" stroke-width="5"/><path d="M50 15v-8M50 93v-8" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg><h3>CT</h3><p>導入・更新・設置条件・運用を含め、施設の事情を整理しながらご相談に対応します。</p><span class="tag">病院・診療所・動物医療</span></article>
-<article class="modality"><div class="no">02</div><svg viewBox="0 0 100 100"><path d="M18 86V40c0-19 14-31 32-31s32 12 32 31v46" fill="none" stroke="currentColor" stroke-width="6"/><circle cx="50" cy="42" r="17" fill="none" stroke="currentColor" stroke-width="5"/><path d="M29 78h42" stroke="currentColor" stroke-width="6"/></svg><h3>MRI</h3><p>更新計画、設置環境、運用条件など、装置以外の条件も含めてご相談いただけます。</p><span class="tag">病院・診療所・動物医療</span></article>
-<article class="modality"><div class="no">03</div><svg viewBox="0 0 100 100"><rect x="12" y="17" width="38" height="56" rx="6" fill="none" stroke="currentColor" stroke-width="6"/><path d="M70 18v58M59 35h25M59 61h25M49 47h14" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg><h3>一般X線</h3><p>撮影室更新、FPDを含む構成、既存設備との組み合わせなどをご相談ください。</p><span class="tag">病院・診療所・健診</span></article>
-<article class="modality"><div class="no">04</div><svg viewBox="0 0 100 100"><path d="M66 12v75M48 24h35M48 35h27M53 49h22M32 84h48" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M38 41c12 0 19 6 19 17s-7 17-19 17c-8 0-13-4-13-10V51c0-6 5-10 13-10Z" fill="none" stroke="currentColor" stroke-width="5"/></svg><h3>マンモグラフィ</h3><p>乳腺・検診領域を含む画像診断機器のご相談に対応します。</p><span class="tag">乳腺・検診</span></article>
-<article class="modality"><div class="no">05</div><svg viewBox="0 0 100 100"><rect x="28" y="9" width="44" height="82" rx="16" fill="none" stroke="currentColor" stroke-width="6"/><path d="M38 67h24M42 26h16M42 45c8-9 19-9 27 0M43 54c7-6 16-6 23 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg><h3>超音波</h3><p>携帯型を含む超音波診断装置について、用途や診療現場に合わせてご相談いただけます。</p><span class="tag">人医療・動物医療</span></article>
-<article class="modality"><div class="no">06</div><svg viewBox="0 0 100 100"><circle cx="30" cy="31" r="9" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="70" cy="31" r="9" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="22" r="9" fill="none" stroke="currentColor" stroke-width="5"/><circle cx="50" cy="59" r="22" fill="none" stroke="currentColor" stroke-width="5"/><path d="M39 63c6 8 16 8 22 0" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round"/></svg><h3>動物医療</h3><p>動物病院向けのUS・XR・CT・MRIなど、画像診断機器の導入・更新をご相談ください。</p><span class="tag">動物病院</span></article>
+<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">SATO SHOKAI · YUSHIMA</div><h1>医療の困りごとに、<br>人として向き合う。</h1><p class="lead">CT、MRI、一般X線、マンモグラフィ、超音波。装置の導入・更新・下取りから、病院・診療所・健診施設・研究機関・動物病院の「どこに相談したらよいか分からない」まで。</p><div class="actions"><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">まず相談する</a><a class="btn soft" href="#air-order">Aplio air を注文申込</a></div><div class="three"><div><strong>人を大切に</strong><span class="small">事情を聞くことから</span></div><div><strong>医療を大切に</strong><span class="small">現場に合う方法を考える</span></div><div><strong>よろず相談</strong><span class="small">相談先が分からない時も</span></div></div></div>
+<div class="hero-art"><svg viewBox="0 0 720 520" role="img" aria-label="医療機器商社 サトウ商会"><rect width="720" height="520" rx="26" fill="#fff"/><circle cx="198" cy="250" r="142" fill="none" stroke="#a1261d" stroke-width="18" stroke-linecap="round" stroke-dasharray="730 75" transform="rotate(-10 198 250)"/><circle cx="198" cy="250" r="125" fill="none" stroke="#cf3c31" stroke-width="4" opacity=".5"/><text x="198" y="300" text-anchor="middle" font-size="175" font-weight="900" font-family="serif" fill="#16242c">佐</text><text x="382" y="152" font-size="34" font-weight="800" font-family="serif" fill="#16242c" letter-spacing="7">医療機器商社</text><line x1="382" y1="175" x2="655" y2="175" stroke="#b68a3b" stroke-width="4"/><text x="382" y="272" font-size="68" font-weight="900" font-family="serif" fill="#16242c" letter-spacing="3">サトウ商会</text><text x="405" y="334" font-size="29" font-weight="800" font-family="serif" fill="#16242c" letter-spacing="5">社長 佐藤 孝子</text><text x="382" y="399" font-size="20" font-weight="700" font-family="serif" fill="#526068" letter-spacing="3">人と医療をつなぎ　地域の健康を支える</text><path d="M562 76c18 13 32 26 47 45M592 97c18-12 33-10 47 3M616 120c14-13 27-10 36 0" fill="none" stroke="#172129" stroke-width="4" stroke-linecap="round"/><g fill="#b62b20"><circle cx="582" cy="86" r="9"/><circle cx="612" cy="96" r="11"/><circle cx="638" cy="119" r="9"/><circle cx="601" cy="118" r="8"/></g></svg></div></div></section>
+
+<section class="section white" id="products"><div class="wrap"><div class="section-head"><div><div class="kicker">CANON MEDICAL PRODUCTS</div><h2>キヤノンメディカルの<br>画像診断装置をご提案。</h2></div><p>各製品写真はキヤノンメディカルシステムズ公式Webサイトの公開画像を参照表示しています。具体的な仕様・構成は各公式製品ページおよび個別見積でご確認ください。</p></div><div class="products">
+
+<article class="product featured" id="air-order"><div class="product-media"><img src="https://jp.medical.canon/adobe/dynamicmedia/deliver/dm-aid--e4e139ea-fea8-42db-ae52-8b7b13be17eb/aplio-air-lead-image001.jpg?preferwebp=true&quality=85" alt="Aplio air"></div><div class="product-body"><div class="product-top"><div><span class="tag">ULTRASOUND</span><h3>Aplio air</h3></div><div class="price">850,000円<small>（税別）</small></div></div><p><b>販売希望小売価格：850,000円（税別）／935,000円（税込）</b><br>本体、ワイヤレスチャージャーパッド、ACアダプタ、保護ケース、取扱説明書。本体3年保証。</p><p class="notice">※スマートフォン／タブレット端末は含まれません。※本ページの85万円はサトウ商会でご案内する本体・標準3年保証構成です。キヤノン公式Web販売サイトの5年保証付き構成とは条件が異なります。※Aplio airは動物への使用はできません。</p>
+<div class="orderbox"><div class="kicker">MAIL ORDER REQUEST</div><h3>メールで注文申込</h3><div class="formgrid"><div class="field"><label>法人名・医療機関名 *</label><input id="o_org" autocomplete="organization"></div><div class="field"><label>ご担当者名 *</label><input id="o_name" autocomplete="name"></div><div class="field"><label>電話番号 *</label><input id="o_tel" type="tel" autocomplete="tel"></div><div class="field"><label>E-mail *</label><input id="o_email" type="email" autocomplete="email"></div><div class="field"><label>数量 *</label><input id="o_qty" type="number" min="1" value="1"></div><div class="field"><label>用途</label><select id="o_purpose"><option>診療</option><option>健診・検診</option><option>往診・訪問診療</option><option>研究・教育</option><option>その他</option></select></div><div class="field full"><label>住所</label><input id="o_addr" autocomplete="street-address"></div><div class="field full"><label>備考・ご相談</label><textarea id="o_note"></textarea></div></div><label class="check"><input type="checkbox" id="o_agree"><span>医療機関・医療関係者等としての注文申込であり、最終的な納期・取引条件・受注可否はサトウ商会からの確認連絡をもって確定することを確認します。</span></label><div class="order-actions"><button class="btn primary" type="button" onclick="mailOrder()">注文申込メールを作成</button><button class="btn" type="button" onclick="copyOrder()">内容をコピー</button></div><div id="o_total" class="notice">1台：935,000円（税込）</div></div>
+<div class="source">画像・製品情報：<a href="https://jp.medical.canon/products/ultrasound/products/aplio-air/" target="_blank" rel="noopener">キヤノンメディカルシステムズ公式 Aplio air</a></div></div></article>
+
+<article class="product"><div class="product-media"><img src="https://jp.medical.canon/adobe/dynamicmedia/deliver/dm-aid--15ca9e17-0cc2-4f5e-ba0a-ef34b8b72de7/900-422-aquilion-serve.png?preferwebp=true&quality=85" alt="Aquilion Serve CT"></div><div class="product-body"><span class="tag">CT</span><h3>Aquilion Serve</h3><p>CTの導入・更新、設置条件や運用についてご相談ください。</p><a class="btn soft" href="https://jp.medical.canon/products/computed-tomography/multi-slice-ct/aq-serve/" target="_blank" rel="noopener">公式製品情報</a><div class="source">画像出典：キヤノンメディカルシステムズ公式Web</div></div></article>
+
+<article class="product"><div class="product-media"><img src="https://jp.medical.canon/adobe/dynamicmedia/deliver/dm-aid--4ccc3712-407c-4d78-b403-760b454c2cfe/fortian-new20250425.png?preferwebp=true&quality=85" alt="Vantage Fortian MRI"></div><div class="product-body"><span class="tag">MRI</span><h3>Vantage Fortian</h3><p>MRIの導入・更新、設置環境、運用計画などを含めてご相談いただけます。</p><a class="btn soft" href="https://jp.medical.canon/products/magnetic-resonance/vantage-fortian/" target="_blank" rel="noopener">公式製品情報</a><div class="source">画像出典：キヤノンメディカルシステムズ公式Web</div></div></article>
+
+<article class="product"><div class="product-media"><img src="https://jp.medical.canon/content/dam/canon/migrated/jp/jp-products-xray-radrex-i5-flex-edition/DSTX-A10_BS-02_EBT-100A_20241224_banner.jpg" alt="Radrex i5 Flex Edition"></div><div class="product-body"><span class="tag">X-RAY</span><h3>Radrex i5 / Flex Edition</h3><p>一般X線撮影装置、FPDを含む構成、撮影室更新などをご相談ください。</p><a class="btn soft" href="https://jp.medical.canon/products/xray/rf/general-radiography-system/radrex-i5-flex-edition/" target="_blank" rel="noopener">公式製品情報</a><div class="source">画像出典：キヤノンメディカルシステムズ公式Web</div></div></article>
+
+<article class="product"><div class="product-media"><img src="https://jp.medical.canon/content/dam/canon/migrated/jp/jp-products-xray-digital/Peruru-DIGITAL_banner000.jpg" alt="Pe･ru･ru DIGITAL"></div><div class="product-body"><span class="tag">MAMMOGRAPHY</span><h3>Pe･ru･ru DIGITAL</h3><p>乳腺・マンモグラフィ、健診施設での導入・更新についてご相談ください。</p><a class="btn soft" href="https://jp.medical.canon/products/xray/mg/mammography/digital/" target="_blank" rel="noopener">公式製品情報</a><div class="source">画像出典：キヤノンメディカルシステムズ公式Web</div></div></article>
+
 </div></div></section>
-<section class="section dark" id="style"><div class="wrap value-grid"><div><div class="kicker" style="color:#efcf91">SATO SHOKAI STYLE</div><div class="quote">「売る」より先に、<br><span class="red">困っている人を助ける。</span></div><p style="color:#cbd6da;max-width:720px">医師、医療従事者、研究者、学生、動物医療に関わる方々。案件の金額だけで線を引かず、それぞれの事情に向き合う。サトウ商会が長く大切にしてきた商いの姿勢です。</p></div><div class="values"><div class="value"><b>医療機器販売</b>画像診断機器を中心とした導入相談</div><div class="value"><b>病院のお困りごと</b>更新・設置・運用・下取りまで</div><div class="value"><b>研究・教育</b>特殊用途や研究環境のご相談</div><div class="value"><b>よろず相談</b>どこに聞けばよいか分からない案件の入口</div></div></div></section>
-<section class="section gold"><div class="wrap"><div class="section-head"><div><div class="kicker">HOW WE WORK</div><h2>ご相談から導入まで。</h2></div><p>最初から機種が決まっている必要はありません。用途・設置条件・予算・運用を整理し、次の一手を一緒に考えます。</p></div><div class="flow"><div class="step"><div class="n">1</div><strong>相談</strong><p>困りごと・背景を伺います。</p></div><div class="step"><div class="n">2</div><strong>整理</strong><p>用途、設置、予算、運用を確認。</p></div><div class="step"><div class="n">3</div><strong>提案</strong><p>複数の選択肢を整理します。</p></div><div class="step"><div class="n">4</div><strong>導入</strong><p>見積、納品、設置を調整します。</p></div><div class="step"><div class="n">5</div><strong>その後</strong><p>更新・下取りまでご相談ください。</p></div></div></div></section>
-<section class="section white" id="access"><div class="wrap"><div class="section-head"><div><div class="kicker">NETWORK & ACCESS</div><h2>人と医療を、<br>湯島からつなぐ。</h2></div><p>病院・診療所、健診、研究・教育、動物医療、メーカー。それぞれの現場をつなぐのがサトウ商会の役割です。</p></div><div class="relation"><div class="diagram"><svg viewBox="0 0 640 430" aria-label="サトウ商会ネットワーク図"><circle cx="320" cy="215" r="82" fill="#9e241b"/><text x="320" y="207" text-anchor="middle" fill="#fff" font-size="27" font-weight="800">サトウ商会</text><text x="320" y="238" text-anchor="middle" fill="#f5d69f" font-size="14">相談・調整・つなぐ</text><g stroke="#b68a3b" stroke-width="3"><line x1="320" y1="133" x2="320" y2="65"/><line x1="387" y1="166" x2="493" y2="101"/><line x1="402" y1="222" x2="520" y2="222"/><line x1="380" y1="276" x2="478" y2="344"/><line x1="260" y1="276" x2="162" y2="344"/><line x1="238" y1="222" x2="120" y2="222"/><line x1="253" y1="166" x2="147" y2="101"/></g><g fill="#fff" stroke="#ddd5c8"><rect x="245" y="22" width="150" height="48" rx="16"/><rect x="480" y="70" width="140" height="48" rx="16"/><rect x="487" y="198" width="140" height="48" rx="16"/><rect x="450" y="337" width="170" height="48" rx="16"/><rect x="20" y="337" width="170" height="48" rx="16"/><rect x="13" y="198" width="140" height="48" rx="16"/><rect x="20" y="70" width="160" height="48" rx="16"/></g><g fill="#16242c" font-size="16" font-weight="700" text-anchor="middle"><text x="320" y="52">病院・診療所</text><text x="550" y="100">健診・検診</text><text x="557" y="228">動物医療</text><text x="535" y="367">研究・教育</text><text x="105" y="367">メーカー・技術</text><text x="83" y="228">更新・下取り</text><text x="100" y="100">よろず相談</text></g></svg></div><div class="mapcard"><iframe title="株式会社サトウ商会 周辺地図" loading="lazy" src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%87%E4%BA%AC%E5%8C%BA%E6%B9%AF%E5%B3%B62-31-15&output=embed"></iframe><div class="mapinfo"><strong>株式会社サトウ商会</strong><br>〒113-0034 東京都文京区湯島2-31-15<br>TEL 03-3814-0381</div></div></div></div></section>
-<section class="contact"><div class="wrap contact-grid"><div><div class="kicker" style="color:#f5d69f">CONTACT</div><h2>まずは、困りごとから。</h2><p>機器名が決まっていなくても構いません。更新、設置、下取り、動物病院、研究用途など、状況をお聞かせください。</p></div><div><a class="mail" href="mailto:sato-shokai@yacht.ocn.ne.jp">sato-shokai@yacht.ocn.ne.jp</a><div class="actions"><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">メールで相談する</a><a class="btn" href="tel:0338140381">電話する</a></div></div></div></section>
-<div class="compliance-strip"><div class="wrap"><p>一般公開ページでは、個別医療機器の効能・性能・価格等の訴求を避け、企業案内・相談窓口として構成しています。</p><a class="small" href="compliance.html">掲載方針・コンプライアンス →</a></div></div>
-</main>
-<footer class="footer"><div class="wrap">© 株式会社サトウ商会　｜　東京都文京区湯島2-31-15</div></footer>
-</body>
-</html>
+
+<section class="section dark" id="style"><div class="wrap value-grid"><div><div class="kicker" style="color:#efcf91">SATO SHOKAI STYLE</div><div class="quote">「売る」より先に、<br><em>困っている人を助ける。</em></div><p style="color:#cbd6da">医師、医療従事者、研究者、学生、動物医療に関わる方々。それぞれの事情に向き合い、必要な人や技術につなぐ。それがサトウ商会の仕事の原点です。</p></div><div class="values"><div class="value"><b>医療機器販売</b>画像診断機器を中心とした導入相談</div><div class="value"><b>更新・下取り</b>既存装置の入替えや下取り</div><div class="value"><b>病院・研究</b>通常の商談に収まらない相談にも</div><div class="value"><b>よろず相談</b>相談先が分からない時の入口</div></div></div></section>
+
+<section class="section gold"><div class="wrap"><div class="section-head"><div><div class="kicker">HOW WE WORK</div><h2>ご相談から導入まで。</h2></div><p>最初から機種が決まっていなくても構いません。用途・設置条件・予算・運用を整理しながら進めます。</p></div><div class="flow"><div class="step"><div class="n">1</div><strong>相談</strong><p>困りごとを伺います。</p></div><div class="step"><div class="n">2</div><strong>整理</strong><p>用途・設置・予算を確認。</p></div><div class="step"><div class="n">3</div><strong>提案</strong><p>選択肢を整理します。</p></div><div class="step"><div class="n">4</div><strong>導入</strong><p>見積・納品・設置を調整。</p></div><div class="step"><div class="n">5</div><strong>その後</strong><p>更新・下取りまで。</p></div></div></div></section>
+
+<section class="section white" id="access"><div class="wrap"><div class="section-head"><div><div class="kicker">ACCESS</div><h2>人と医療を、<br>湯島からつなぐ。</h2></div><p>病院・診療所、健診、研究・教育、動物医療、メーカー。それぞれの現場をつなぎます。</p></div><div class="access"><div class="diagram"><svg viewBox="0 0 640 430"><circle cx="320" cy="215" r="82" fill="#9e241b"/><text x="320" y="208" text-anchor="middle" fill="#fff" font-size="26" font-weight="800">サトウ商会</text><text x="320" y="238" text-anchor="middle" fill="#f4d59c" font-size="14">相談・調整・つなぐ</text><g stroke="#b68a3b" stroke-width="3"><line x1="320" y1="133" x2="320" y2="65"/><line x1="387" y1="166" x2="493" y2="101"/><line x1="402" y1="222" x2="520" y2="222"/><line x1="380" y1="276" x2="478" y2="344"/><line x1="260" y1="276" x2="162" y2="344"/><line x1="238" y1="222" x2="120" y2="222"/><line x1="253" y1="166" x2="147" y2="101"/></g><g fill="#fff" stroke="#ddd5c8"><rect x="245" y="22" width="150" height="48" rx="16"/><rect x="480" y="70" width="140" height="48" rx="16"/><rect x="487" y="198" width="140" height="48" rx="16"/><rect x="450" y="337" width="170" height="48" rx="16"/><rect x="20" y="337" width="170" height="48" rx="16"/><rect x="13" y="198" width="140" height="48" rx="16"/><rect x="20" y="70" width="160" height="48" rx="16"/></g><g fill="#16242c" font-size="16" font-weight="700" text-anchor="middle"><text x="320" y="52">病院・診療所</text><text x="550" y="100">健診・検診</text><text x="557" y="228">動物医療</text><text x="535" y="367">研究・教育</text><text x="105" y="367">メーカー・技術</text><text x="83" y="228">更新・下取り</text><text x="100" y="100">よろず相談</text></g></svg></div><div class="map"><iframe title="株式会社サトウ商会 周辺地図" loading="lazy" src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%87%E4%BA%AC%E5%8C%BA%E6%B9%AF%E5%B3%B62-31-15&output=embed"></iframe><div class="mapinfo"><strong>株式会社サトウ商会</strong><br>〒113-0034 東京都文京区湯島2-31-15<br>TEL 03-3814-0381</div></div></div></div></section>
+
+<section class="contact"><div class="wrap contact-grid"><div><div class="kicker" style="color:#f4d59c">CONTACT</div><h2>まずは、困りごとから。</h2><p>更新、設置、下取り、動物病院、研究用途など、状況をお聞かせください。</p></div><div><a class="mail" href="mailto:sato-shokai@yacht.ocn.ne.jp">sato-shokai@yacht.ocn.ne.jp</a><div class="actions"><a class="btn primary" href="mailto:sato-shokai@yacht.ocn.ne.jp?subject=医療機器のご相談">メールで相談する</a><a class="btn" href="tel:0338140381">03-3814-0381</a></div></div></div></section>
+<div class="compliance"><div class="wrap"><p>医療機器の表示は、承認・認証範囲と適切な取引条件に基づく情報提供を行います。メーカー画像の公開利用は権利者・社内の素材利用ルールに従います。</p><a class="small" href="compliance.html">掲載方針 →</a></div></div>
+</main><footer><div class="wrap">© 株式会社サトウ商会　｜　画像出典：キヤノンメディカルシステムズ株式会社公式Webサイト（各製品リンク参照）</div></footer>
+<script>
+function n(id){return document.getElementById(id)}
+function calc(){const q=Math.max(1,parseInt(n('o_qty').value||'1',10)),ex=850000*q,tax=Math.round(ex*.1);n('o_total').textContent=q+'台：'+(ex+tax).toLocaleString('ja-JP')+'円（税込）／税別 '+ex.toLocaleString('ja-JP')+'円'}
+n('o_qty').addEventListener('input',calc);calc();
+function orderText(){const q=Math.max(1,parseInt(n('o_qty').value||'1',10)),ex=850000*q,tax=Math.round(ex*.1);return ['【Aplio air 注文申込】','法人名・医療機関名：'+n('o_org').value,'ご担当者名：'+n('o_name').value,'電話番号：'+n('o_tel').value,'E-mail：'+n('o_email').value,'住所：'+n('o_addr').value,'用途：'+n('o_purpose').value,'数量：'+q+'台','販売希望小売価格：850,000円/台（税別）','税別小計：'+ex.toLocaleString('ja-JP')+'円','消費税：'+tax.toLocaleString('ja-JP')+'円','税込合計：'+(ex+tax).toLocaleString('ja-JP')+'円','備考・ご相談：'+n('o_note').value,'','※本メールは注文申込です。納期・取引条件・受注可否は株式会社サトウ商会からの確認連絡をもって確定します。'].join('\n')}
+function valid(){if(!n('o_org').value||!n('o_name').value||!n('o_tel').value||!n('o_email').value){alert('必須項目をご入力ください。');return false}if(!n('o_agree').checked){alert('確認事項にチェックをお願いします。');return false}return true}
+function mailOrder(){if(!valid())return;const sub=encodeURIComponent('Aplio air 注文申込｜'+n('o_org').value);location.href='mailto:sato-shokai@yacht.ocn.ne.jp?subject='+sub+'&body='+encodeURIComponent(orderText())}
+async function copyOrder(){if(!valid())return;try{await navigator.clipboard.writeText(orderText());alert('注文申込内容をコピーしました。')}catch(e){alert('コピーできませんでした。')}}
+</script></body></html>
