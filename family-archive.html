@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>高橋家 家族史アーカイブ｜ページをめくって読む</title>
+<meta name="description" content="高橋二二郎・高橋公二・高橋民子の人生史PDFを、ページ送りで閲覧・ダウンロードできる家族史アーカイブ。">
+<meta name="theme-color" content="#101114">
+<link rel="stylesheet" href="css/style.css">
+<style>
+:root{--reader-bg:#0d0f12;--reader-panel:#171a1f;--reader-line:#30343c;--reader-accent:#d9a441;--reader-ink:#f5f2eb;--reader-muted:#bbb5aa}
+body{background:var(--reader-bg)}
+.archive-hero{padding:5.8rem 0 2.2rem;border-bottom:1px solid var(--reader-line);background:radial-gradient(circle at 80% 0,rgba(217,164,65,.17),transparent 34%),linear-gradient(135deg,#0c0d0f,#201c17)}
+.archive-hero h1{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(2.6rem,6vw,5.2rem);line-height:1.05;margin:.15em 0}
+.archive-hero p{max-width:900px;color:var(--reader-muted)}
+.archive-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
+.archive-tab{border:1px solid var(--reader-line);background:#15171b;color:var(--reader-ink);border-radius:16px;padding:15px;text-align:left;cursor:pointer;transition:.18s}
+.archive-tab:hover,.archive-tab.active{border-color:var(--reader-accent);transform:translateY(-1px)}
+.archive-tab strong{display:block;color:var(--reader-accent);font-size:1.05rem}.archive-tab span{display:block;color:var(--reader-muted);font-size:.82rem;margin-top:4px}
+.reader-shell{border:1px solid var(--reader-line);border-radius:20px;background:var(--reader-panel);overflow:hidden;box-shadow:0 25px 65px rgba(0,0,0,.25)}
+.reader-toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:12px 14px;border-bottom:1px solid var(--reader-line);background:#111318;position:sticky;top:48px;z-index:5}
+.reader-toolbar button,.reader-toolbar a,.reader-toolbar input{font:inherit}
+.reader-toolbar button,.reader-toolbar a{border:1px solid #444a54;background:#1c1f25;color:#eee;border-radius:10px;padding:8px 11px;text-decoration:none;cursor:pointer}
+.reader-toolbar button:hover,.reader-toolbar a:hover{border-color:var(--reader-accent);color:var(--reader-accent)}
+.reader-toolbar button:disabled{opacity:.4;cursor:not-allowed}
+.pagebox{display:flex;align-items:center;gap:5px;color:var(--reader-muted);margin-left:auto}
+.pagebox input{width:60px;background:#0f1115;color:#fff;border:1px solid #444a54;border-radius:8px;padding:7px;text-align:center}
+.reader-stage{min-height:72vh;display:grid;place-items:center;padding:26px;background:linear-gradient(180deg,#23262c,#111317)}
+#pdfCanvas{max-width:100%;height:auto;background:#fff;box-shadow:0 14px 44px rgba(0,0,0,.48);border-radius:3px}
+.loading{padding:50px 22px;text-align:center;color:var(--reader-muted)}
+.loading strong{display:block;color:#fff;font-size:1.1rem;margin-bottom:8px}
+.reader-meta{padding:18px 20px;border-top:1px solid var(--reader-line);color:var(--reader-muted);font-size:.9rem}
+.reader-meta strong{color:#eee}
+.help{margin:22px 0;padding:18px;border:1px solid var(--reader-line);border-radius:16px;color:var(--reader-muted);background:#121418}
+.help b{color:#eee}
+@media(max-width:760px){.archive-tabs{grid-template-columns:1fr}.reader-stage{padding:12px;min-height:58vh}.reader-toolbar{top:47px}.pagebox{margin-left:0;width:100%;justify-content:center}.archive-hero{padding-top:4.8rem}}
+@media print{nav,.archive-tabs,.reader-toolbar,.help{display:none}.reader-shell{border:0;box-shadow:none}.reader-stage{background:#fff;padding:0}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a href="index.html">HOME</a><a href="roots2.html">ROOTS II</a><a href="takahashi-history.html">高橋一族史</a><a href="family-archive.html" aria-current="page">家族史アーカイブ</a></div></nav>
+<header class="archive-hero" id="top"><div class="wrap">
+<div class="eyebrow">Takahashi Family Archive</div>
+<h1>家族史を、ページをめくって読む。</h1>
+<p>高橋二二郎・高橋公二・高橋民子。それぞれの人生史を、Web上で1ページずつ閲覧できます。前へ／次へ、ページ番号指定、拡大・縮小、全画面表示、PDFダウンロードに対応しています。</p>
+</div></header>
+<main><div class="wrap">
+<div class="archive-tabs" role="tablist" aria-label="資料を選択">
+<button class="archive-tab active" data-doc="nijiro" role="tab"><strong>高橋二二郎</strong><span>人生史・家族史｜1908–1989｜34ページ</span></button>
+<button class="archive-tab" data-doc="koji" role="tab"><strong>高橋公二</strong><span>人生録｜1945–2010｜52ページ</span></button>
+<button class="archive-tab" data-doc="tamiko" role="tab"><strong>高橋民子（旧姓 平野）</strong><span>人生と系譜｜1941–1991｜23ページ</span></button>
+</div>
+
+<div class="reader-shell" id="reader">
+<div class="reader-toolbar">
+<button id="prevBtn" type="button">← 前のページ</button>
+<button id="nextBtn" type="button">次のページ →</button>
+<button id="zoomOut" type="button">−</button>
+<button id="zoomIn" type="button">＋</button>
+<button id="fitBtn" type="button">幅に合わせる</button>
+<button id="fullBtn" type="button">全画面</button>
+<a id="downloadBtn" href="docs/nijiro.pdf" download>PDFをダウンロード</a>
+<div class="pagebox"><span>ページ</span><input id="pageInput" type="number" min="1" value="1" aria-label="ページ番号"><span>/ <b id="pageCount">–</b></span></div>
+</div>
+<div class="reader-stage" id="stage">
+<canvas id="pdfCanvas" hidden></canvas>
+<div class="loading" id="loading"><strong>PDFを読み込んでいます…</strong><span>数秒かかる場合があります。</span></div>
+</div>
+<div class="reader-meta"><strong id="docTitle">高橋二二郎 人生史・家族史</strong><br><span id="docMeta">1908–1989｜畔屋から舞岡へ</span></div>
+</div>
+
+<div class="help"><b>操作方法：</b>「前のページ」「次のページ」で本のように順番に読み進められます。ページ番号を直接入力して移動することもできます。スマートフォンでは画面を横向きにすると資料を大きく表示できます。</div>
+</div></main>
+<footer><div class="wrap footerline"><span>© 2026 Shinobu Takahashi · Family Archive</span><a href="#top">TOP ↑</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs" type="module"></script>
+<script type="module">
+import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs';
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs';
+
+const docs={
+ nijiro:{url:'docs/nijiro.pdf',title:'高橋二二郎 人生史・家族史',meta:'1908–1989｜新潟・畔屋から舞岡へ'},
+ koji:{url:'docs/koji.pdf',title:'高橋公二 人生録',meta:'1945–2010｜科学を信じ、人を愛し、家族を深く愛した人'},
+ tamiko:{url:'docs/tamiko.pdf',title:'高橋民子（旧姓 平野）人生と系譜',meta:'1941–1991｜種子島から横浜へ'}
+};
+let pdf=null,page=1,scale=1.15,current='nijiro',renderTask=null,fitMode=true;
+const canvas=document.getElementById('pdfCanvas'),ctx=canvas.getContext('2d');
+const loading=document.getElementById('loading'),stage=document.getElementById('stage');
+const pageInput=document.getElementById('pageInput'),pageCount=document.getElementById('pageCount');
+const prevBtn=document.getElementById('prevBtn'),nextBtn=document.getElementById('nextBtn');
+const dl=document.getElementById('downloadBtn');
+
+async function loadDoc(key){
+ current=key;page=1;pdf=null;canvas.hidden=true;loading.hidden=false;
+ loading.innerHTML='<strong>PDFを読み込んでいます…</strong><span>数秒かかる場合があります。</span>';
+ document.querySelectorAll('.archive-tab').forEach(b=>b.classList.toggle('active',b.dataset.doc===key));
+ const d=docs[key];dl.href=d.url;document.getElementById('docTitle').textContent=d.title;document.getElementById('docMeta').textContent=d.meta;
+ try{
+   pdf=await pdfjsLib.getDocument({url:d.url}).promise;
+   pageCount.textContent=pdf.numPages;pageInput.max=pdf.numPages;pageInput.value=1;loading.hidden=true;canvas.hidden=false;
+   await render();
+ }catch(e){
+   console.error(e);canvas.hidden=true;loading.hidden=false;
+   loading.innerHTML='<strong>PDFファイルを読み込めませんでした。</strong><span>資料ファイルの公開反映待ち、または通信エラーの可能性があります。</span>';
+   pageCount.textContent='–';
+ }
+ updateButtons();
+}
+async function render(){
+ if(!pdf)return;if(renderTask){try{renderTask.cancel()}catch(e){}}
+ const p=await pdf.getPage(page);
+ let targetScale=scale;
+ if(fitMode){
+   const base=p.getViewport({scale:1});
+   targetScale=Math.max(.35,(stage.clientWidth-40)/base.width);
+ }
+ const viewport=p.getViewport({scale:targetScale});
+ const ratio=window.devicePixelRatio||1;
+ canvas.width=Math.floor(viewport.width*ratio);canvas.height=Math.floor(viewport.height*ratio);
+ canvas.style.width=Math.floor(viewport.width)+'px';canvas.style.height=Math.floor(viewport.height)+'px';
+ const transform=ratio!==1?[ratio,0,0,ratio,0,0]:null;
+ renderTask=p.render({canvasContext:ctx,viewport,transform});
+ try{await renderTask.promise}catch(e){if(e?.name!=='RenderingCancelledException')throw e}
+ pageInput.value=page;updateButtons();
+}
+function updateButtons(){prevBtn.disabled=!pdf||page<=1;nextBtn.disabled=!pdf||page>=pdf.numPages}
+prevBtn.onclick=()=>{if(pdf&&page>1){page--;render()}};
+nextBtn.onclick=()=>{if(pdf&&page<pdf.numPages){page++;render()}};
+pageInput.onchange=()=>{if(!pdf)return;const n=Math.max(1,Math.min(pdf.numPages,parseInt(pageInput.value)||1));page=n;render()};
+document.getElementById('zoomIn').onclick=()=>{fitMode=false;scale=Math.min(3,scale+.15);render()};
+document.getElementById('zoomOut').onclick=()=>{fitMode=false;scale=Math.max(.4,scale-.15);render()};
+document.getElementById('fitBtn').onclick=()=>{fitMode=true;render()};
+document.getElementById('fullBtn').onclick=()=>{document.getElementById('reader').requestFullscreen?.()};
+document.querySelectorAll('.archive-tab').forEach(b=>b.onclick=()=>loadDoc(b.dataset.doc));
+window.addEventListener('resize',()=>{if(pdf&&fitMode){clearTimeout(window.__rt);window.__rt=setTimeout(render,120)}});
+document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')prevBtn.click();if(e.key==='ArrowRight')nextBtn.click()});
+loadDoc('nijiro');
+</script>
+</body></html>
