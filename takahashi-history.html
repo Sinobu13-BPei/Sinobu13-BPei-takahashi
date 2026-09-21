@@ -8,28 +8,160 @@
 <meta name="theme-color" content="#111111">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.history-hero{padding:7rem 0 4rem;background:linear-gradient(135deg,#0e0e0e 0%,#24201b 54%,#4a3d2d 100%);color:#fff}
-.history-hero .lead{max-width:980px;color:#e4e0da}
-.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.2rem 0 0}.badge{padding:.35rem .7rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem}
-.history-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.3rem 0 0;position:sticky;top:52px;z-index:4;background:rgba(255,255,255,.95);padding:.65rem 0;border-bottom:1px solid #ddd}
-.history-nav a{display:inline-block;padding:.48rem .7rem;border:1px solid #ccc;border-radius:8px;text-decoration:none;background:#fff}
-.metric-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.metric{padding:1.15rem;border:1px solid #ddd;border-radius:14px;background:#fff}.metric strong{display:block;font-size:1.65rem}
-.mapbox,.diagram{border:1px solid #ddd;border-radius:18px;padding:1rem;background:#fafafa;overflow:auto}
-.route{min-width:780px;display:flex;align-items:center;justify-content:space-between;gap:.3rem;padding:1rem 0}.place{min-width:95px;text-align:center;border:1px solid #bbb;border-radius:12px;padding:.7rem .5rem;background:#fff;font-size:.9rem}.arrow{font-size:1.25rem;color:#777}
-.castle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.castle{border:1px solid #ddd;border-radius:14px;padding:1rem;background:#fff}.castle small{display:block;color:#666;margin-top:.25rem}
-.tree{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;overflow:auto;background:#111;color:#eee;border-radius:16px;padding:1.2rem;line-height:1.7}
-.evidence-table td:first-child{white-space:nowrap}.source-list a{word-break:break-all}
-.chip{display:inline-block;padding:.17rem .48rem;border-radius:999px;font-size:.76rem;margin-right:.25rem}.chip.a{background:#111;color:#fff}.chip.b{background:#555;color:#fff}.chip.c{background:#d9d9d9;color:#111}.chip.d{background:#f4f4f4;border:1px solid #bbb}
-.longtable{font-size:.94rem}.longtable th{white-space:nowrap}.longtable td{vertical-align:top}
-.callout{padding:1rem 1.1rem;border-left:4px solid #222;background:#f7f5f1;border-radius:8px;margin:1rem 0}
-.kamon-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.kamon{padding:1.2rem;border:1px solid #ddd;border-radius:16px;background:#fff}
-.timeline .event p{margin-bottom:.25rem}
-.subhead{font-size:1.1rem;margin-top:1.4rem}
-@media(max-width:900px){.metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr 1fr}.history-nav{position:static}}
-@media(max-width:600px){.metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr}.history-hero{padding-top:5.5rem}.longtable{font-size:.86rem}}
+.history-page{
+  --h-bg:#0e0f11;--h-panel:#17191d;--h-panel2:#1d2025;--h-line:#30343b;
+  --h-ink:#f5f2eb;--h-muted:#bdb7ad;--h-accent:#d9a441;--h-paper:#f4f0e7;
+  --h-paper-ink:#25211b;--h-max:1180px;background:var(--h-bg);color:var(--h-ink);
+}
+.history-page .wrap{width:min(var(--h-max),92vw)}
+.history-page section{scroll-margin-top:118px}
+.history-hero{
+  padding:7rem 0 4.7rem;
+  background:
+    radial-gradient(circle at 78% 16%,rgba(217,164,65,.16),transparent 28%),
+    linear-gradient(135deg,#0b0c0e 0%,#24201b 54%,#493a29 100%);
+  color:#fff;border-bottom:1px solid var(--h-line);
+}
+.history-hero h1{font-family:Georgia,"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(3.1rem,8vw,6.8rem);line-height:1;margin:.14em 0 .22em;font-weight:500;letter-spacing:-.035em}
+.history-hero .lead{max-width:980px;color:#e4e0da;font-size:clamp(1rem,1.6vw,1.16rem)}
+.badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.35rem 0 0}
+.badge{padding:.35rem .7rem;border:1px solid rgba(255,255,255,.34);border-radius:999px;font-size:.8rem;color:#f7f2e9;background:rgba(0,0,0,.14)}
+
+.reading-progress{position:fixed;left:0;right:0;top:0;height:3px;z-index:90;pointer-events:none}
+.reading-progress span{display:block;width:0;height:100%;background:var(--h-accent);transition:width .08s linear}
+.skip-link{position:fixed;left:12px;top:-80px;z-index:100;background:#fff;color:#111;padding:10px 14px;border-radius:8px;text-decoration:none}
+.skip-link:focus{top:12px}
+
+.history-page nav:not(.history-nav){z-index:50}
+.history-nav{
+  display:flex;gap:.45rem;align-items:center;
+  margin:0 -1px 1.5rem;padding:.65rem 1px;
+  position:sticky;top:49px;z-index:35;
+  background:rgba(14,15,17,.94);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--h-line);overflow-x:auto;white-space:nowrap;
+  scrollbar-width:thin;
+}
+.history-nav a{
+  flex:0 0 auto;display:inline-block;padding:.45rem .68rem;
+  border:1px solid var(--h-line);border-radius:999px;text-decoration:none;
+  color:#d9d3ca;background:#15171a;font-size:.8rem;transition:.18s ease;
+}
+.history-nav a:hover,.history-nav a.active{border-color:var(--h-accent);color:var(--h-accent);background:#1c1b18}
+
+.history-page .page-main{padding-top:32px}
+.history-page .page-main> .wrap>section{padding:72px 0;border-bottom:1px solid var(--h-line)}
+.history-page .eyebrow{color:var(--h-accent)}
+.history-page h2{font-size:clamp(2rem,4vw,3.35rem);line-height:1.2}
+.history-page h3{line-height:1.45}
+.history-page .lead{color:var(--h-muted);max-width:900px}
+.history-page p{color:var(--h-muted)}
+.history-page strong{color:var(--h-ink)}
+
+.metric-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:1.2rem 0 1.8rem}
+.metric{padding:1.15rem;border:1px solid var(--h-line);border-radius:16px;background:linear-gradient(180deg,var(--h-panel2),var(--h-panel));color:var(--h-ink);min-height:112px}
+.metric strong{display:block;font-size:clamp(1.35rem,2.5vw,1.85rem);color:var(--h-accent);line-height:1.2;margin-bottom:.4rem}
+.metric span{color:var(--h-muted);font-size:.9rem}
+
+.history-page .card,.castle,.kamon{
+  background:linear-gradient(180deg,#1b1d21,#15171a);
+  border:1px solid var(--h-line);color:var(--h-ink);
+}
+.castle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.castle{border-radius:18px;padding:1.15rem;min-height:180px}
+.castle strong{display:block;font-size:1.1rem;color:var(--h-ink)}
+.castle small{display:block;color:var(--h-accent);margin:.22rem 0 .55rem}
+.castle p,.kamon p{margin:0;color:var(--h-muted)}
+.kamon-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.kamon{padding:1.2rem;border-radius:18px}
+
+.mapbox,.diagram{
+  border:1px solid var(--h-line);border-radius:18px;padding:1.15rem;
+  background:#121417;overflow:auto;margin:1rem 0;
+}
+.route{min-width:800px;display:flex;align-items:center;justify-content:space-between;gap:.38rem;padding:.75rem 0}
+.place{min-width:104px;text-align:center;border:1px solid #474b53;border-radius:12px;padding:.7rem .5rem;background:#1b1e23;color:#f1ede6;font-size:.88rem}
+.arrow{font-size:1.2rem;color:var(--h-accent)}
+
+.tree{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Noto Sans Mono CJK JP",monospace;
+  white-space:pre;overflow:auto;background:#0a0b0d;color:#eee;
+  border:1px solid var(--h-line);border-radius:16px;padding:1.25rem;line-height:1.72;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.03);
+}
+.callout{
+  padding:1rem 1.1rem;border:1px solid #3f3b31;border-left:4px solid var(--h-accent);
+  background:#191813;border-radius:10px;margin:1.2rem 0;color:var(--h-muted);
+}
+.callout strong{color:var(--h-accent)}
+.history-page .note{background:#121316;border:1px dashed #4b4e55;color:var(--h-muted)}
+.history-page .quote{background:var(--h-paper);color:var(--h-paper-ink);border-left-color:var(--h-accent)}
+.history-page .quote small{color:#665f55}
+
+.chip{display:inline-block;padding:.16rem .47rem;border-radius:999px;font-size:.72rem;line-height:1.35;margin-right:.22rem;font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+.chip.a{background:#e4efe0;color:#20311d;border:1px solid #799d6a}
+.chip.b{background:#e6e8ec;color:#252a31;border:1px solid #7d8490}
+.chip.c{background:#eee1c9;color:#49391f;border:1px solid #aa8f5f}
+.chip.d{background:#2b2d31;color:#dedbd5;border:1px solid #676b74}
+
+.history-page table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  margin:1rem 0 1.5rem;border:1px solid var(--h-line);border-radius:14px;overflow:hidden;
+  background:#121417;
+}
+.history-page th,.history-page td{padding:12px 13px;border-bottom:1px solid var(--h-line);text-align:left;vertical-align:top}
+.history-page th{background:#1b1e23;color:#ede7dc;font-size:.8rem;letter-spacing:.04em;position:sticky;top:0}
+.history-page td{color:var(--h-muted)}
+.history-page tr:last-child td{border-bottom:0}
+.history-page tbody tr:nth-child(even){background:rgba(255,255,255,.018)}
+.history-page tbody tr:hover{background:rgba(217,164,65,.045)}
+.longtable{font-size:.92rem}
+.longtable td:first-child,.longtable th:first-child{white-space:nowrap}
+.evidence-table td:first-child{white-space:normal}
+
+.source-list .card{min-height:135px}
+.source-list a{color:#e8c173;text-decoration-thickness:1px;text-underline-offset:3px;word-break:break-word}
+.source-list a:hover{color:#ffd992}
+.subhead{font-size:1.06rem;margin-top:1.35rem;color:#e8e1d7}
+
+.history-page footer{border-top:1px solid var(--h-line)}
+.history-page a:focus-visible{outline:2px solid var(--h-accent);outline-offset:3px;border-radius:4px}
+
+@media(max-width:900px){
+  .metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr 1fr}
+  .history-nav{top:48px}
+  .history-page .page-main> .wrap>section{padding:58px 0}
+}
+@media(max-width:700px){
+  .metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr}
+  .history-hero{padding:5.6rem 0 3.6rem}
+  .history-nav{top:47px;margin-bottom:.7rem}
+  .history-page .page-main{padding-top:18px}
+  .history-page .page-main> .wrap>section{padding:48px 0}
+  .history-page table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px}
+  .history-page table thead,.history-page table tbody{display:table;width:100%;min-width:720px}
+  .longtable{font-size:.84rem}
+  .tree{font-size:.78rem;padding:1rem}
+}
+@media(max-width:420px){
+  .history-nav a{font-size:.75rem;padding:.4rem .58rem}
+  .history-hero h1{font-size:2.75rem}
+  .badge{font-size:.74rem}
+}
+@media print{
+  .reading-progress,.skip-link,.history-nav{display:none!important}
+  .history-page{background:#fff;color:#111}
+  .history-page section{scroll-margin-top:0}
+  .history-page .card,.castle,.kamon,.mapbox,.diagram,.history-page .note,.callout,.tree{background:#fff!important;color:#111!important;border-color:#bbb!important;box-shadow:none}
+  .history-page p,.history-page td,.castle p,.kamon p,.history-page .lead{color:#333!important}
+  .tree{white-space:pre-wrap}
+  .history-page table{background:#fff;border-color:#bbb}
+  .history-page th{background:#eee;color:#111}
+}
 </style>
 </head>
-<body>
+<body class="history-page">
+<div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+<a class="skip-link" href="#mainContent">本文へ移動</a>
 <nav><div class="wrap">
 <a href="index.html">HOME</a><a href="timeline.html">TIMELINE</a><a href="roots.html">ROOTS</a><a href="roots2.html">ROOTS II</a><a href="takahashi-history.html" aria-current="page">高橋一族史</a><a href="career.html">CAREER</a><a href="family.html">FAMILY</a><a href="be-free.html">BE FREE</a><a href="about.html">ABOUT</a>
 </div></nav>
@@ -41,12 +173,12 @@
 <div class="badges"><span class="badge">高橋姓の成立</span><span class="badge">全国分布</span><span class="badge">旧石器〜古代越後</span><span class="badge">北陸道・東山道</span><span class="badge">弥彦社家高橋</span><span class="badge">柏崎・刈羽</span><span class="badge">畔屋</span><span class="badge">北条毛利氏</span><span class="badge">黒滝城・桔梗城</span><span class="badge">家紋・屋号・親族</span></div>
 </div></header>
 
-<main class="page-main"><div class="wrap">
+<main class="page-main" id="mainContent"><div class="wrap">
 <div class="note"><strong>史料の扱い：</strong> <span class="chip a">A</span>一次史料・公的資料、<span class="chip b">B</span>自治体史・地域史・研究資料、<span class="chip c">C</span>家伝・口伝・家族記憶、<span class="chip d">D</span>仮説・推論。年代や地理が一致しても、それだけで血統や主従関係が証明されたとは扱わない。存命者の詳細な個人情報は公開しない。</div>
 
-<div class="history-nav">
+<nav class="history-nav" aria-label="ページ内目次">
 <a href="#summary">結論</a><a href="#national">全国</a><a href="#ancient">古代高橋</a><a href="#prehistory">新潟前史</a><a href="#roads">道</a><a href="#niigata">新潟高橋</a><a href="#azeya">畔屋</a><a href="#temples">寺社</a><a href="#castles">城郭</a><a href="#fuji">藤井高橋</a><a href="#lineage">家系</a><a href="#relatives">親族</a><a href="#kamon">家紋</a><a href="#chronology">年表</a><a href="#hypothesis">仮説</a><a href="#sources">出典</a>
-</div>
+</nav>
 
 <section id="summary">
 <div class="eyebrow">Executive summary</div><h2>現段階の結論</h2>
@@ -221,7 +353,6 @@
 │   ├─ 勝
 │   ├─ 伀（しょう）
 │   ├─ 好夫
-│   ├─ 勇
 │   ├─ 和子 → 赤堀家
 │   ├─ 貞子 → 原家
 │   └─ 正子 → 政金家
@@ -350,9 +481,25 @@
 </div>
 </section>
 
-<div class="note"><strong>公開研究の現在地：</strong> 「畔屋高橋家＝古代高橋朝臣」「畔屋高橋家＝弥彦社家高橋」「畔屋高橋家＝北条毛利氏家臣高橋」と断定できる段階ではない。最も堅いのは、柏崎・刈羽の在地高橋家として実証を積み上げ、藤井高橋家との接続を最優先で検証すること。そのうえで弥彦・黒滝城・桔梗城・古代高橋氏へ比較範囲を広げる。</div>
+<div class="note"><strong>研究上の最終整理：</strong> 「畔屋高橋家＝古代高橋朝臣」「畔屋高橋家＝弥彦社家高橋」「畔屋高橋家＝北条毛利氏家臣高橋」と断定できる段階ではない。最も堅いのは、柏崎・刈羽の在地高橋家として実証を積み上げ、藤井高橋家との接続を最優先で検証すること。そのうえで弥彦・黒滝城・桔梗城・古代高橋氏へ比較範囲を広げる。</div>
 </div></main>
 
 <footer><div class="wrap footerline"><span>© 2026 Shinobu Takahashi · Takahashi Family History</span><a href="#top">TOP ↑</a></div></footer>
 <script src="js/app.js"></script>
+<script>
+(function(){
+  const bar=document.getElementById('readingBar');
+  const links=[...document.querySelectorAll('.history-nav a[href^="#"]')];
+  const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    if(bar) bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+    let current=sections[0];
+    for(const sec of sections){ if(sec.getBoundingClientRect().top<=150) current=sec; }
+    links.forEach(a=>a.classList.toggle('active',current&&a.getAttribute('href')==='#'+current.id));
+  }
+  addEventListener('scroll',update,{passive:true}); addEventListener('resize',update); update();
+})();
+</script>
 </body></html>
