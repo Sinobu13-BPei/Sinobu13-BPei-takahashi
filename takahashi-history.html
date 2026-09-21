@@ -4,25 +4,29 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>高橋一族の歴史｜全国の高橋姓から越後・柏崎・畔屋高橋家へ</title>
-<meta name="description" content="高橋姓の成立、全国分布、古代高橋朝臣、新潟・弥彦の高橋氏、柏崎・刈羽・畔屋高橋家、北条毛利氏、藤井高橋家、黒滝城・桔梗城の家伝を、確定史料・地域史・家伝・仮説に分けて整理した公開研究ページ。">
+<meta name="description" content="高橋姓の成立、全国分布、古代高橋朝臣、新潟・弥彦の高橋氏、柏崎・刈羽・畔屋高橋家、北条毛利氏、藤井高橋家、黒滝城・桔梗城、家紋・屋号・親族関係までを詳しく整理した公開研究ページ。">
 <meta name="theme-color" content="#111111">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.history-hero{padding:7rem 0 4rem;background:linear-gradient(135deg,#111 0%,#242424 58%,#3a3127 100%);color:#fff}
-.history-hero .lead{max-width:900px;color:#ddd}
+.history-hero{padding:7rem 0 4rem;background:linear-gradient(135deg,#0e0e0e 0%,#24201b 54%,#4a3d2d 100%);color:#fff}
+.history-hero .lead{max-width:980px;color:#e4e0da}
 .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.2rem 0 0}.badge{padding:.35rem .7rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.82rem}
-.history-nav{display:flex;gap:.55rem;flex-wrap:wrap;margin:1.3rem 0 0}.history-nav a{display:inline-block;padding:.5rem .75rem;border:1px solid #ccc;border-radius:8px;text-decoration:none}
+.history-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.3rem 0 0;position:sticky;top:52px;z-index:4;background:rgba(255,255,255,.95);padding:.65rem 0;border-bottom:1px solid #ddd}
+.history-nav a{display:inline-block;padding:.48rem .7rem;border:1px solid #ccc;border-radius:8px;text-decoration:none;background:#fff}
 .metric-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.metric{padding:1.15rem;border:1px solid #ddd;border-radius:14px;background:#fff}.metric strong{display:block;font-size:1.65rem}
-.band{display:flex;height:20px;border-radius:999px;overflow:hidden;background:#eee;margin:.8rem 0}.band span{display:block;height:100%}
-.band .a{width:42%;background:#202020}.band .b{width:31%;background:#666}.band .c{width:17%;background:#aaa}.band .d{width:10%;background:#ddd}
-.legend{display:flex;gap:1rem;flex-wrap:wrap;font-size:.86rem}.dot{display:inline-block;width:.7rem;height:.7rem;border-radius:50%;margin-right:.3rem}.dot.a{background:#202020}.dot.b{background:#666}.dot.c{background:#aaa}.dot.d{background:#ddd;border:1px solid #aaa}
-.mapbox{border:1px solid #ddd;border-radius:18px;padding:1rem;background:#fafafa;overflow:auto}
-.route{min-width:720px;display:flex;align-items:center;justify-content:space-between;gap:.3rem;padding:1rem 0}.place{min-width:95px;text-align:center;border:1px solid #bbb;border-radius:12px;padding:.7rem .5rem;background:#fff;font-size:.9rem}.arrow{font-size:1.25rem;color:#777}
-.castle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.castle{border:1px solid #ddd;border-radius:14px;padding:1rem}.castle small{display:block;color:#666;margin-top:.3rem}
+.mapbox,.diagram{border:1px solid #ddd;border-radius:18px;padding:1rem;background:#fafafa;overflow:auto}
+.route{min-width:780px;display:flex;align-items:center;justify-content:space-between;gap:.3rem;padding:1rem 0}.place{min-width:95px;text-align:center;border:1px solid #bbb;border-radius:12px;padding:.7rem .5rem;background:#fff;font-size:.9rem}.arrow{font-size:1.25rem;color:#777}
+.castle-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.castle{border:1px solid #ddd;border-radius:14px;padding:1rem;background:#fff}.castle small{display:block;color:#666;margin-top:.25rem}
 .tree{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;overflow:auto;background:#111;color:#eee;border-radius:16px;padding:1.2rem;line-height:1.7}
 .evidence-table td:first-child{white-space:nowrap}.source-list a{word-break:break-all}
-@media(max-width:900px){.metric-row,.castle-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.metric-row,.castle-grid{grid-template-columns:1fr}.history-hero{padding-top:5.5rem}}
+.chip{display:inline-block;padding:.17rem .48rem;border-radius:999px;font-size:.76rem;margin-right:.25rem}.chip.a{background:#111;color:#fff}.chip.b{background:#555;color:#fff}.chip.c{background:#d9d9d9;color:#111}.chip.d{background:#f4f4f4;border:1px solid #bbb}
+.longtable{font-size:.94rem}.longtable th{white-space:nowrap}.longtable td{vertical-align:top}
+.callout{padding:1rem 1.1rem;border-left:4px solid #222;background:#f7f5f1;border-radius:8px;margin:1rem 0}
+.kamon-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.kamon{padding:1.2rem;border:1px solid #ddd;border-radius:16px;background:#fff}
+.timeline .event p{margin-bottom:.25rem}
+.subhead{font-size:1.1rem;margin-top:1.4rem}
+@media(max-width:900px){.metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr 1fr}.history-nav{position:static}}
+@media(max-width:600px){.metric-row,.castle-grid,.kamon-row{grid-template-columns:1fr}.history-hero{padding-top:5.5rem}.longtable{font-size:.86rem}}
 </style>
 </head>
 <body>
@@ -31,114 +35,191 @@
 </div></nav>
 
 <header class="history-hero" id="top"><div class="wrap">
-<div class="eyebrow">Takahashi Family History · research edition 2026</div>
+<div class="eyebrow">Takahashi Family History · expanded research edition 2026</div>
 <h1>高橋一族の歴史</h1>
-<p class="lead">古代の「高橋朝臣」から、越後・弥彦の社家高橋氏、柏崎・刈羽の在地高橋氏、北条毛利氏家臣を称する藤井高橋家、そして畔屋の「やしき」「角屋」へ。史料で確かめられる事実と、家に残る口伝を混同せず、一つの歴史地図として整理する。</p>
-<div class="badges"><span class="badge">全国分布</span><span class="badge">古代高橋朝臣</span><span class="badge">越後・弥彦</span><span class="badge">柏崎・刈羽</span><span class="badge">畔屋</span><span class="badge">北条毛利氏</span><span class="badge">黒滝城・桔梗城</span></div>
+<p class="lead">高橋という姓はどこから生まれ、なぜ東日本・新潟に多いのか。古代高橋朝臣、越後・弥彦の社家高橋氏、柏崎・刈羽の在地高橋氏、北条毛利氏家臣を称する藤井高橋家、そして畔屋の「やしき」「角屋」へ。全国史・交通史・城郭史・村落史・家族史を重ね、確認できる事実と家伝を分けながら、現段階の全体像を詳しく整理する。</p>
+<div class="badges"><span class="badge">高橋姓の成立</span><span class="badge">全国分布</span><span class="badge">旧石器〜古代越後</span><span class="badge">北陸道・東山道</span><span class="badge">弥彦社家高橋</span><span class="badge">柏崎・刈羽</span><span class="badge">畔屋</span><span class="badge">北条毛利氏</span><span class="badge">黒滝城・桔梗城</span><span class="badge">家紋・屋号・親族</span></div>
 </div></header>
 
-<main class="page-main">
-<div class="wrap">
-<div class="note"><strong>公開版の原則：</strong> A＝一次・公的資料、B＝自治体史・地域史、C＝家伝・口伝、D＝仮説。歴史的整合性は血統証明ではない。存命者の正確な住所・生年月日・勤務先・健康情報は掲載しない。</div>
+<main class="page-main"><div class="wrap">
+<div class="note"><strong>史料の扱い：</strong> <span class="chip a">A</span>一次史料・公的資料、<span class="chip b">B</span>自治体史・地域史・研究資料、<span class="chip c">C</span>家伝・口伝・家族記憶、<span class="chip d">D</span>仮説・推論。年代や地理が一致しても、それだけで血統や主従関係が証明されたとは扱わない。存命者の詳細な個人情報は公開しない。</div>
 
 <div class="history-nav">
-<a href="#national">全国</a><a href="#ancient">古代</a><a href="#roads">人の流れ</a><a href="#niigata">新潟</a><a href="#azeya">畔屋</a><a href="#castles">城郭</a><a href="#fuji">藤井高橋</a><a href="#lineage">家系</a><a href="#kamon">家紋・家伝</a><a href="#hypothesis">仮説</a><a href="#sources">出典</a>
+<a href="#summary">結論</a><a href="#national">全国</a><a href="#ancient">古代高橋</a><a href="#prehistory">新潟前史</a><a href="#roads">道</a><a href="#niigata">新潟高橋</a><a href="#azeya">畔屋</a><a href="#temples">寺社</a><a href="#castles">城郭</a><a href="#fuji">藤井高橋</a><a href="#lineage">家系</a><a href="#relatives">親族</a><a href="#kamon">家紋</a><a href="#chronology">年表</a><a href="#hypothesis">仮説</a><a href="#sources">出典</a>
 </div>
 
-<section id="national">
-<div class="eyebrow">01 · National distribution</div><h2>高橋姓は、日本を代表する大姓</h2>
-<p class="lead">民間姓氏データベースでは高橋姓は全国3位級、約136万人規模と推計される。国勢調査の公式姓別人数ではないため概数として扱うが、分布は明瞭で、東北から新潟にかけて特に密度が高い。</p>
-<div class="metric-row">
-<div class="metric"><strong>全国3位級</strong><span>国内有数の大姓</span></div>
-<div class="metric"><strong>約136万人</strong><span>民間推計・概数</span></div>
-<div class="metric"><strong>新潟 約4.5万人</strong><span>民間推計</span></div>
-<div class="metric"><strong>東北〜新潟</strong><span>高密度分布帯</span></div>
+<section id="summary">
+<div class="eyebrow">Executive summary</div><h2>現段階の結論</h2>
+<div class="grid">
+<article class="card big"><h3>1｜畔屋高橋家は「柏崎・刈羽の在地高橋氏」とみるのが最も堅い</h3><p>屋号「やしき」「角屋」、村内の高橋姓の集積、真珠院墓地との関係、近隣の藤井に残る高橋家系図などを総合すると、まず柏崎・刈羽の地域史の中で成立・分家した高橋家として追うのが最も合理的である。</p></article>
+<article class="card big"><h3>2｜北条毛利氏家臣を称する「藤井高橋家」が最大の鍵</h3><p>『高橋三郎右衛門代々系図記』には、先祖が北条村城主毛利丹後守の家来で「御鑓奉行」、落城後に藤井へ移り村役人になったという由緒がある。畔屋高橋との直接接続は未確認だが、現段階で最優先の比較対象である。</p></article>
+<article class="card"><h3>3｜弥彦・黒滝城・桔梗城の家伝は「時代整合性」がある</h3><p>「桔梗城廃止時に越後へ残された」「皆貧乏した」という口伝は、1598年前後の上杉景勝会津移封と城郭網解体という歴史とよく重なる。ただし高橋家の在城・奉公を示す直接史料は未発見。</p></article>
+<article class="card"><h3>4｜古代高橋朝臣は重要な比較対象だが、直系とは言えない</h3><p>古代高橋朝臣は天皇の食膳を担った膳臣系氏族。高橋家の「城で料理・儀礼食」という家伝との類似は興味深いが、千年以上の系譜空白があるため、現時点で直系説は採らない。</p></article>
 </div>
-<p>重要なのは「全国の高橋が一族」ではないこと。高橋姓は各地の地名、職掌、武士団、神職家などから複数回成立したと考えるのが安全である。</p>
+</section>
+
+<section id="national">
+<div class="eyebrow">01 · National distribution</div><h2>高橋姓の国内分布</h2>
+<p class="lead">高橋姓は日本全国に分布するが、とりわけ東北・関東・新潟に濃い。民間姓氏推計では全国3位級・約136万人規模とされる。これは国勢調査の公式姓別人数ではないため、人数は参考値として扱う。</p>
+<div class="metric-row">
+<div class="metric"><strong>全国3位級</strong><span>日本有数の大姓</span></div>
+<div class="metric"><strong>約136万人</strong><span>民間推計</span></div>
+<div class="metric"><strong>新潟 約4.5万人</strong><span>県内上位の大姓</span></div>
+<div class="metric"><strong>東北〜新潟</strong><span>人口比でも高密度</span></div>
+</div>
+<table class="longtable">
+<thead><tr><th>地域</th><th>特徴</th><th>研究上の意味</th></tr></thead>
+<tbody>
+<tr><td>岩手・秋田・宮城・山形</td><td>人口比が特に高い。</td><td>高橋姓は東日本で非常に古く広がった大姓で、単一祖先説を取りにくい。</td></tr>
+<tr><td>関東</td><td>絶対人数が非常に多い。</td><td>近世以降の都市流入も含むため、現代人数だけで発祥地は決められない。</td></tr>
+<tr><td>新潟</td><td>人口比でも高く、旧村単位で集中が残る。</td><td>弥彦の社家系、柏崎・刈羽の在地系など複数系統を想定する必要がある。</td></tr>
+</tbody>
+</table>
+<div class="callout"><strong>重要：</strong> 「高橋」という名字は一度だけ生まれたのではない。古代氏族名、各地の高橋地名、武士家、神職家、農村家などから独立に成立しうる。したがって全国の高橋氏を一つの系図にまとめることはできない。</div>
 </section>
 
 <section id="ancient">
-<div class="eyebrow">02 · Ancient Takahashi</div><h2>最古級の高橋氏――膳臣から高橋朝臣へ</h2>
+<div class="eyebrow">02 · Ancient Takahashi</div><h2>高橋姓の最古級の歴史――膳臣から高橋朝臣へ</h2>
 <div class="grid">
-<article class="card big"><div class="year">7世紀後半</div><h3>膳臣（かしわでのおみ）→ 高橋朝臣</h3><p>古代王権で天皇の食膳を担当した膳氏の本流が「高橋朝臣」を称するようになる。律令国家でも内膳司など「食」に関係する職掌を担った古い氏族である。</p></article>
-<article class="card"><div class="year">9世紀</div><h3>信濃にも高橋朝臣</h3><p>『日本三代実録』には信濃国人の高橋朝臣に関する記録があり、古代の段階から畿内と信濃の間で人の移動があったことを考える材料になる。</p></article>
-<article class="card"><div class="year">注意</div><h3>畔屋との直結は未証明</h3><p>畔屋高橋家に「料理・儀礼食」の口伝があることは興味深いが、古代高橋朝臣との血統接続を示す史料はない。</p></article>
+<article class="card big"><div class="year">7世紀後半</div><h3>膳臣（かしわでのおみ）</h3><p>古代王権で天皇の食膳を担った氏族。天武朝には朝臣姓を賜り、その本流が7世紀末頃に「高橋朝臣」を称するようになったと整理される。大和国の高橋邑との関係が指摘される。</p></article>
+<article class="card big"><div class="year">律令国家</div><h3>「食」を担う高橋氏</h3><p>高橋氏は宮廷の内膳関係に関与し、膳部・食膳奉仕という古い職掌を持つ氏族として知られる。これは畔屋高橋家の「城で料理や儀礼食を担当した」という口伝と文化的に響き合う。</p></article>
+<article class="card"><div class="year">864頃</div><h3>信濃にも高橋朝臣</h3><p>『日本三代実録』には信濃国人の高橋朝臣が現れ、古代高橋氏が畿内だけに限定されなかったことがわかる。</p></article>
+<article class="card"><div class="year">判定</div><h3>畔屋との直結は未証明</h3><p>古代氏族と中世・近世村落家系の間には大きな史料空白がある。職掌の一致は比較材料であって、血統証明ではない。</p></article>
+</div>
+</section>
+
+<section id="prehistory">
+<div class="eyebrow">03 · Before recorded history</div><h2>新潟に人が住み始めた歴史</h2>
+<p class="lead">高橋姓の歴史よりはるか以前、新潟には旧石器時代から人類活動が存在した。したがって「奈良や京都から日本人が新潟へ流入して、新潟の歴史が始まった」という構図ではない。</p>
+<div class="timeline">
+<div class="event"><time>約3万数千年前</time><h3>後期旧石器時代</h3><p>新潟県内で人類活動の痕跡が確認される。山地・河川・台地を利用した狩猟採集の時代。</p></div>
+<div class="event"><time>縄文時代</time><h3>日本海側の広域交流</h3><p>糸魚川ヒスイなどに象徴される広域交易が発達。新潟は「中央から文化を受け取るだけ」の地域ではなく、列島規模交流の一拠点だった。</p></div>
+<div class="event"><time>弥生〜古墳</time><h3>北陸・信濃・東日本との結節</h3><p>農耕・金属器文化が広がり、古墳時代には大和政権との政治的接触が強まる。</p></div>
+<div class="event"><time>7世紀</time><h3>越後が律令国家へ組み込まれる</h3><p>渟足柵・磐舟柵など北方経営の拠点が置かれ、越後国が形成される。官人・兵・開拓民などの移動も進む。</p></div>
 </div>
 </section>
 
 <section id="roads">
-<div class="eyebrow">03 · Routes</div><h2>畿内・信濃・越後を結んだ道</h2>
-<p class="lead">新潟には旧石器時代から人が住み、奈良・京都から「初めて人が来た」わけではない。一方、律令国家成立後は北陸道と東山道系統の交通により、畿内・美濃・信濃・越後の人・物・軍事・宗教文化が往来した。</p>
+<div class="eyebrow">04 · Roads & geopolitics</div><h2>奈良・京都から岐阜・長野・新潟へ――道はあったか</h2>
+<p class="lead">答えは「はい」。ただし一つの一本道ではなく、主に北陸道系と東山道・信濃系の二つの大きな回廊があった。</p>
 <div class="mapbox">
-<div class="route"><div class="place">大和・奈良</div><div class="arrow">→</div><div class="place">近江</div><div class="arrow">→</div><div class="place">美濃</div><div class="arrow">→</div><div class="place">信濃</div><div class="arrow">→</div><div class="place">妙高</div><div class="arrow">→</div><div class="place">頸城・直江津</div><div class="arrow">→</div><div class="place">柏崎</div></div>
-<div class="route"><div class="place">京都・近江</div><div class="arrow">→</div><div class="place">越前</div><div class="arrow">→</div><div class="place">加賀</div><div class="arrow">→</div><div class="place">越中</div><div class="arrow">→</div><div class="place">越後</div><div class="arrow">→</div><div class="place">寺泊・弥彦</div><div class="arrow">→</div><div class="place">刈羽・柏崎</div></div>
+<h3 class="subhead">東山道・信濃系</h3>
+<div class="route"><div class="place">大和・奈良</div><div class="arrow">→</div><div class="place">近江</div><div class="arrow">→</div><div class="place">美濃</div><div class="arrow">→</div><div class="place">信濃</div><div class="arrow">→</div><div class="place">飯山・妙高</div><div class="arrow">→</div><div class="place">頸城・直江津</div><div class="arrow">→</div><div class="place">柏崎</div></div>
+<h3 class="subhead">北陸道・日本海系</h3>
+<div class="route"><div class="place">京都・近江</div><div class="arrow">→</div><div class="place">若狭・越前</div><div class="arrow">→</div><div class="place">加賀</div><div class="arrow">→</div><div class="place">越中</div><div class="arrow">→</div><div class="place">越後</div><div class="arrow">→</div><div class="place">寺泊・弥彦</div><div class="arrow">→</div><div class="place">刈羽・柏崎</div></div>
 </div>
-<p>古代官道、中世軍道、近世北国街道は完全に同じ道ではないが、山地を越えやすい地形回廊が長期に繰り返し使われた。高橋氏の越後定着を考える際も「一つの移住ルート」に固定しない。</p>
+<p>妙高・頸城は信濃と越後を結ぶ玄関口で、古代官道、中世軍道、近世北国街道の時代を通じて重要性を持った。畔屋高橋家の「妙高山参詣」伝承も、この歴史地理の中に置くと自然に理解できる。ただし参詣伝承から移住経路を直接推定することはできない。</p>
 </section>
 
 <section id="niigata">
-<div class="eyebrow">04 · Niigata Takahashi</div><h2>新潟の高橋氏――少なくとも中世には複数系統</h2>
+<div class="eyebrow">05 · Niigata Takahashi</div><h2>新潟の高橋氏――弥彦社家系と柏崎・刈羽在地系</h2>
 <div class="grid">
-<article class="card big"><h3>弥彦神社・旧神主高橋家 <span class="evidence a">A/B</span></h3><p>國學院大學には旧神主高橋家の約1,200点に及ぶ文書群が整理されている。さらに旧舎人高橋家文書も別に存在し、弥彦神社社会の中に複数の高橋家があった。</p></article>
-<article class="card big"><h3>鎌倉後期の高橋姓 <span class="evidence b">B</span></h3><p>弥彦関係の後世写しには、1290年頃の「高橋先生大夫」、1322年頃の「高橋膳正大夫」などが見える。原本そのものではなく写しを含むため、文書伝来を踏まえて慎重に扱う。</p></article>
-<article class="card"><h3>柏崎・刈羽在地高橋氏</h3><p>柏崎市内では藤井、畔屋、女谷、西山、高柳など旧村単位で高橋姓のまとまりが見える。これは複数の村落高橋家が長く分家を重ねた可能性を示唆するが、各系統の同祖性は未証明。</p></article>
+<article class="card big"><h3>弥彦神社・旧神主高橋家 <span class="chip a">A/B</span></h3><p>國學院大學には「彌彦神社文書目録（旧神主高橋家）」として約1,200点の文書群が整理される。神社祭祀、社領、地域支配などを考える重要史料群。</p></article>
+<article class="card big"><h3>旧舎人高橋家 <span class="chip a">A/B</span></h3><p>旧神主家とは別に「旧舎人高橋家文書」も残る。つまり弥彦神社社会の高橋氏は一戸だけではなく、複数の社家系統を含む。</p></article>
+<article class="card"><h3>1290年前後</h3><p>後世写しに「高橋先生大夫」の名が見える。</p></article>
+<article class="card"><h3>1322年前後</h3><p>同じく「高橋膳正大夫」の名が見える。中世初期の越後に高橋姓を称する社家層がいたことを示す重要材料。</p></article>
 </div>
+<div class="callout"><strong>畔屋との関係：</strong> 高橋家には弥彦神社周辺にも親族がいるという口伝があるが、現段階では「畔屋高橋家＝弥彦神主高橋家」の系譜証明はない。両者は比較対象として並行して追う。</div>
 </section>
 
 <section id="azeya">
-<div class="eyebrow">05 · Azeya</div><h2>畔屋――古代遺跡・中世城館・戦国前線の村</h2>
-<div class="timeline">
-<div class="event"><time>古墳〜平安</time><h3>畔屋本村・北入・南入遺跡</h3><p>古墳時代から古代にかけての遺物が確認され、畔屋一帯の人間活動は戦国期よりはるかに古い。</p></div>
-<div class="event"><time>1343</time><h3>萬福寺創建伝承</h3><p>現在の日蓮宗萬福寺は、宗派側の記録では康永2年に真言宗寺院として創立し、1533年に日蓮宗へ改宗したとされる。畔屋城主の母による創建という地域伝承もある。</p></div>
-<div class="event"><time>1574</time><h3>「あせ屋」</h3><p>中世文書に畔屋を示す地名が確認される。</p></div>
-<div class="event"><time>1579</time><h3>御館の乱</h3><p>景勝方が赤田から畔屋に陣取り、北条城方面へ圧力をかけたことが伝わる。畔屋は北条城攻防の前線空間だった。</p></div>
-<div class="event"><time>近世</time><h3>水田村落の拡大</h3><p>水利・新田開発とともに村落が成長。同姓家が増え、屋号で本家・分家を区別する社会構造が形成された可能性がある。</p></div>
+<div class="eyebrow">06 · Azeya</div><h2>畔屋の歴史――古墳時代から中世城館、戦国前線へ</h2>
+<table class="longtable">
+<thead><tr><th>時代</th><th>畔屋で確認・伝承されること</th><th>高橋家研究への意味</th></tr></thead>
+<tbody>
+<tr><td>古墳時代</td><td>畔屋本村遺跡・北入遺跡などで古墳期の活動痕跡。</td><td>畔屋は戦国期に突然成立した村ではない。</td></tr>
+<tr><td>奈良・平安</td><td>北入・南入など古代遺跡。</td><td>古代から人が暮らす地域基盤がある。</td></tr>
+<tr><td>南北朝〜室町</td><td>畔屋城。城主を兼美／見美土佐守とする地域伝承。</td><td>村の背後に在地領主・城館社会が存在した可能性。</td></tr>
+<tr><td>1343</td><td>萬福寺創建伝承。現在の日蓮宗側資料では元真言宗寺院。</td><td>城館・寺院・集落が中世に結びついていた可能性。</td></tr>
+<tr><td>1533</td><td>萬福寺が日蓮宗へ改宗したとされる。</td><td>畔屋の宗教史に大きな転換。</td></tr>
+<tr><td>1574</td><td>文書に「あせ屋」の地名。</td><td>戦国期に畔屋地名が確実に存在。</td></tr>
+<tr><td>1579</td><td>御館の乱。景勝方が赤田から畔屋へ進出し北条城方面を圧迫。</td><td>畔屋が北条城攻防の軍事前線となる。</td></tr>
+<tr><td>近世</td><td>水利改善・耕地開発、村落拡大。高橋など同姓家が分家した可能性。</td><td>「やしき」「角屋」のような屋号形成を考える背景。</td></tr>
+<tr><td>近代以降</td><td>北鯖石村から柏崎市へ。</td><td>高橋・石口・赤堀など旧村婚姻圏が続く。</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="temples">
+<div class="eyebrow">07 · Temples & belief</div><h2>萬福寺・真珠院・弥彦――宗教史から家をみる</h2>
+<div class="grid">
+<article class="card big"><h3>萬福寺（畔屋）</h3><p>畔屋集落内の寺院。康永2年（1343）創建、当初は真言宗、天文2年（1533）に日蓮宗へ改宗したという宗派側の由緒がある。城主の母による創建という地域伝承も残る。</p></article>
+<article class="card big"><h3>真珠院</h3><p>畔屋高橋家の墓地・菩提関係を追う上で重要。秀快上人の入定で知られる。畔屋の村寺が萬福寺であっても、各家の檀那関係は別寺院である場合がある。</p></article>
+<article class="card"><h3>妙高山参詣 <span class="chip c">C</span></h3><p>「一生に一度は妙高山へ参る」という家伝。山岳信仰と交通史の両面で検討対象。</p></article>
+<article class="card"><h3>「二足四足」を避ける正月 <span class="chip c">C</span></h3><p>家の正月禁忌。弥彦地域にも「四足二足」を避ける伝承があり、文化的類似はあるが血縁証明ではない。</p></article>
 </div>
 </section>
 
 <section id="castles">
-<div class="eyebrow">06 · Castles</div><h2>畔屋を取り巻く城郭ネットワーク</h2>
+<div class="eyebrow">08 · Castle network</div><h2>畔屋・藤井・北条・二つの黒滝城・桔梗城</h2>
 <div class="castle-grid">
-<div class="castle"><strong>畔屋城</strong><small>南北朝〜室町期か</small><p>在地城館。兼美／見美土佐守の地域伝承があるが、人物比定は未確定。</p></div>
-<div class="castle"><strong>北条城</strong><small>北条毛利氏</small><p>北条高広・景広の本拠。1579年、御館の乱の中で景広戦死後に開城。</p></div>
-<div class="castle"><strong>藤井城</strong><small>1616〜1620頃</small><p>徳川期、稲垣重綱が築城。戦国期の北条毛利氏の城ではなく、時代が一段後。</p></div>
-<div class="castle"><strong>柏崎・黒滝城</strong><small>上条上杉氏圏</small><p>上条城の詰城・要害とされる。畔屋から近距離にあり、家伝の「黒滝城」の候補の一つ。</p></div>
-<div class="castle"><strong>弥彦・黒滝城</strong><small>上杉系要塞</small><p>「黒滝要害」。北陸道の軍事要衝。山岸氏が城主層として現れる。</p></div>
-<div class="castle"><strong>桔梗城</strong><small>弥彦・黒滝城と連動</small><p>戦国後期、黒滝城主山岸秀能の支配下。上杉景勝の会津移封期に城郭機能を終えたとされる。</p></div>
+<div class="castle"><strong>畔屋城</strong><small>南北朝〜室町期か</small><p>畔屋集落背後の在地城館。兼美／見美土佐守の伝承があるが、正確な表記・系譜は未確定。萬福寺創建伝承と同じ14世紀に重なる。</p></div>
+<div class="castle"><strong>北条城</strong><small>北条毛利氏</small><p>柏崎北東部の有力国人城。北条高広・景広父子。景広は御館の乱で景虎方に立ち、1579年に戦死、北条城も開城。</p></div>
+<div class="castle"><strong>藤井城</strong><small>1616〜1620頃・稲垣重綱</small><p>徳川政権成立後に築かれた近世城郭。北条毛利氏時代とは別時代。藤井高橋家はこれ以前から藤井へ移ったと伝える。</p></div>
+<div class="castle"><strong>柏崎・黒滝城</strong><small>上条上杉氏圏</small><p>上条城背後の詰城・要害とされる。畔屋から近く、家伝の「黒滝城」がこちらを指す可能性もある。</p></div>
+<div class="castle"><strong>弥彦・黒滝城</strong><small>上杉系の広域要塞</small><p>戦国期には「黒滝要害」と呼ばれ、北陸道を押さえる重要拠点。山岸氏が城主層として現れる。</p></div>
+<div class="castle"><strong>桔梗城</strong><small>弥彦・黒滝城と連動</small><p>戦国後期、黒滝城主山岸秀能の支配下。上杉景勝の会津移封期に廃城したとされ、高橋家の「桔梗城廃城時に残された」口伝と年代が重なる。</p></div>
 </div>
-<p class="note"><strong>二つの「黒滝城」：</strong> 弥彦と柏崎の黒滝城は同名だが、現時点で「片方を真似して命名した」「同じ一族が城名を移した」とする史料はない。別々の黒滝地名から成立した城と見るのが自然。ただし、双方とも広い意味で越後上杉氏の政治・軍事圏に属する。</p>
+
+<h3 class="subhead">城同士の関係</h3>
+<div class="tree">【柏崎・刈羽】
+畔屋城（中世在地城館）
+    │
+    ├── 畔屋集落
+    │
+    └── 戦国期には北条城攻防圏へ
+             │
+       北条毛利氏・北条城
+             │
+             └── 家臣高橋氏？ → 藤井へ土着という系図由緒
+
+【柏崎南部】
+上条上杉氏
+    ├── 上条城
+    └── 柏崎・黒滝城（詰城・要害）
+
+【弥彦】
+越後上杉氏の軍事圏
+    └── 弥彦・黒滝城
+             └── 山岸秀能
+                    └── 桔梗城を支配
+                           ↓
+                     1598前後 廃城・移封期</div>
+
+<div class="callout"><strong>二つの「黒滝城」は同名だが別城：</strong> 弥彦黒滝城と柏崎黒滝城の間に「同じ一族が移って名前を移した」「後発の城が名前を真似した」という証拠は今のところない。地名「黒滝」がそれぞれ独立に成立した可能性が高い。ただし両者とも広い意味で越後上杉氏の政治・軍事世界に属する。</div>
 </section>
 
 <section id="fuji">
-<div class="eyebrow">07 · Fuji Takahashi</div><h2>北条毛利氏家臣を称する藤井高橋家</h2>
-<div class="quote">「北条村城主毛利丹後守家来　先祖御鑓奉行」<small>『柏崎市史資料集 近世篇2上』所収「高橋三郎右衛門代々系図記」を柏崎市発掘調査報告書が引用。</small></div>
-<p>藤井の高橋家には、先祖が北条城主・毛利丹後守に仕え、御鑓奉行を務めたという由緒がある。さらに落城後に藤井村へ移り、翌年から村役人になったとされる。系図記の年次には不整合があり、柏崎市側は1579年の北条城開城との関連を検討している。</p>
+<div class="eyebrow">09 · Fuji Takahashi</div><h2>北条毛利氏家臣を称する藤井高橋家</h2>
+<div class="quote">「北条村城主毛利丹後守家来　先祖御鑓奉行」<small>『柏崎市史資料集 近世篇2上』所収「高橋三郎右衛門代々系図記」を柏崎市の発掘調査報告書が紹介。</small></div>
+<p>藤井高橋家の由緒では、先祖が北条城主・毛利丹後守に仕え「御鑓奉行」を務め、落城後に藤井村へ移り、その翌年から村役人になったとされる。由緒中の「永禄7年落城」という年次は史実と整合しにくく、柏崎市側は1579年の御館の乱・北条城開城との関係を検討している。</p>
 <div class="tree">北条毛利氏
    │
-   └─ 家臣 高橋氏
+   └─ 高橋氏（系図由緒）
         └─ 御鑓奉行
              │
-        1579頃？ 北条城開城
+        北条城開城
              │
-             └─ 藤井村へ移住
+             └─ 藤井へ移住
                   └─ 村役人化
                        │
-                       └─ ？ 畔屋高橋家との関係を検証中</div>
-<p><strong>現段階の最重要課題：</strong> 「藤井高橋家」と「畔屋高橋家」が同族かどうか。近接地域・姓分布・家伝の類似はあるが、系図上の接続はまだ確認できていない。</p>
+                       └─ ？ 畔屋高橋家群と分家・婚姻関係か</div>
+<p><strong>ここが最大の研究ポイント：</strong> 藤井高橋家の家紋、墓、過去帳、系図の続柄を確認し、畔屋「やしき」「角屋」とつながるかを見る。特に旧紋「一文字三ツ星」が藤井側でも確認できれば、研究上の重要度は一気に上がる。</p>
 </section>
 
 <section id="lineage">
-<div class="eyebrow">08 · Family line</div><h2>畔屋高橋家――現在確認できる家関係</h2>
+<div class="eyebrow">10 · Azeya lineage</div><h2>畔屋高橋家――本家・分家・養子</h2>
 <div class="grid">
-<article class="card big"><h3>本家「やしき」</h3><p>畔屋には高橋姓が多く、屋号で家を区別した。家伝では本家を「やしき」と呼ぶ。</p></article>
-<article class="card big"><h3>分家「角屋」ほか</h3><p>「角屋」は「やしき」から分かれた家と伝わる。その他の高橋屋号の全体像は未整理。</p></article>
-<article class="card"><h3>貞吉</h3><p>本家に後継がいなかったため、別の高橋家から「やしき」へ養子入りしたという。したがって、本家の家系と貞吉の実父系を分けて追う必要がある。</p></article>
-<article class="card"><h3>親族・婚姻姓</h3><p>長谷川、赤堀、原、政金、石口、斉藤、野嶋などが親族・墓地・婚姻圏に現れる。</p></article>
+<article class="card big"><h3>本家「やしき」 <span class="chip c">C</span></h3><p>畔屋に高橋姓が多数いたため屋号で家を区別した。本家は「やしき」と呼ばれたと伝わる。「屋敷」という語自体が古い本家格を示す可能性はあるが、成立年代は未確認。</p></article>
+<article class="card big"><h3>分家「角屋」 <span class="chip c">C</span></h3><p>「角屋」は「やしき」から分かれた高橋家と伝わる。高橋勇が角屋側の当主だったとの家族記憶もある。</p></article>
+<article class="card"><h3>貞吉の養子入り</h3><p>本家「やしき」に後継がいなかったため、貞吉が別の高橋分家から養子入りしたと伝わる。したがって現直系の男系祖先を追うには、貞吉の実家側と「やしき」本来の家系を分けて調べる必要がある。</p></article>
+<article class="card"><h3>家紋</h3><p>現在の本紋は「丸に桔梗」、旧紋・替紋として「一文字に三ツ星」が伝わる。</p></article>
 </div>
+
 <div class="tree">貞吉 ─ スミ
 ├─ 與一郎
 │   ├─ 勝
-│   ├─ 伀
+│   ├─ 伀（しょう）
 │   ├─ 好夫
 │   ├─ 勇
 │   ├─ 和子 → 赤堀家
@@ -151,77 +232,127 @@
 │   └─ 勇（昭和20年生）
 └─ としえ → 長谷川家
 
-※現代の「勇」という名は、父方親族の勇から継承された家族内の命名。</div>
+※三郎の息子・勇は公二の従兄弟世代。
+※現代の「勇」という名は、この親族名から継承された家族内の命名。</div>
+</section>
+
+<section id="relatives">
+<div class="eyebrow">11 · Kinship network</div><h2>親族・婚姻・周辺姓から見る畔屋高橋家</h2>
+<table class="longtable">
+<thead><tr><th>姓</th><th>高橋家との関係</th><th>歴史研究上の意味</th></tr></thead>
+<tbody>
+<tr><td>長谷川</td><td>貞吉の娘・としえの婚姻先。</td><td>柏崎・刈羽には武士系長谷川氏の歴史もあるが、婚姻先との直結は未証明。</td></tr>
+<tr><td>赤堀</td><td>與一郎の娘・和子の婚姻先。</td><td>畔屋・藤井周辺の在地婚姻圏を復元する手掛かり。</td></tr>
+<tr><td>原</td><td>貞子の婚姻先。</td><td>近代以降の親族ネットワーク。</td></tr>
+<tr><td>政金</td><td>正子の婚姻先。</td><td>希少姓であり、地域内の婚姻範囲を特定しやすい。</td></tr>
+<tr><td>石口</td><td>親族・墓地圏に登場。</td><td>畔屋に多い在地姓。高橋家と旧村内婚姻を考える上で重要。</td></tr>
+<tr><td>斉藤</td><td>親族圏に登場。</td><td>赤田斎藤氏など地域武士史とは分けて検証する必要がある。</td></tr>
+<tr><td>野嶋</td><td>真珠院墓地周辺で確認される親族圏の姓。</td><td>墓地配置から家関係を復元できる可能性。</td></tr>
+</tbody>
+</table>
+<p>同じ名字が歴史上の武士氏族にあるからといって、近現代の親族家をその直系とみなさない。婚姻・墓・過去帳・戸籍を一代ずつつないで確認する。</p>
 </section>
 
 <section id="kamon">
-<div class="eyebrow">09 · Crest & oral tradition</div><h2>一文字三ツ星から、丸に桔梗へ――家紋に残る物語</h2>
-<div class="grid">
-<article class="card big"><h3>旧紋「一文字に三ツ星」 <span class="evidence c">C</span></h3><p>高橋家に伝わる旧家紋。北条毛利氏の大江氏系統で三ツ星系紋が著名である点は興味深いが、紋だけで主従や血統は証明できない。</p></article>
-<article class="card big"><h3>「丸に桔梗」 <span class="evidence c">C</span></h3><p>現在の本紋として伝わる。家伝では「丸＝縄張り」「桔梗＝桔梗城」と説明し、桔梗城廃止時に越後へ残された記憶を紋にしたという。</p></article>
-<article class="card"><h3>「置いていかれた」</h3><p>城がなくなり、上杉氏の移封時に同行せず越後へ残り、生活が苦しくなったという口伝。1598年の上杉景勝会津移封とは時代的に整合する。</p></article>
-<article class="card"><h3>ただし後世解釈の可能性</h3><p>「丸＝縄張り」などの意味づけは一般家紋学の定説ではない。実際の家紋変更時期を示す墓・位牌・古文書が必要。</p></article>
+<div class="eyebrow">12 · Crest & oral tradition</div><h2>一文字三ツ星 → 丸に桔梗――家紋に残る口伝</h2>
+<div class="kamon-row">
+<div class="kamon"><h3>一文字に三ツ星</h3><p><span class="chip c">C</span> 高橋家に「以前の家紋」として伝わる。北条毛利氏が大江氏系で、三ツ星系家紋と関係が深い点は注目されるが、家紋一致だけで主従・血統は証明できない。</p></div>
+<div class="kamon"><h3>丸に桔梗</h3><p><span class="chip c">C</span> 現在の本紋として伝わる。家伝では「丸＝縄張り」「桔梗＝桔梗城」と説明される。</p></div>
 </div>
+
+<div class="quote">「桔梗城がなくなったとき、新潟に置いていかれた。家紋を三ツ星から丸に桔梗にした。丸は縄張り、桔梗は桔梗城。置いていかれた者はみな貧乏した。」<small>高橋家の口伝。史実として断定せず、そのまま保存する。</small></div>
+
+<p>この口伝の核心は、1598年前後の上杉景勝会津移封と、弥彦黒滝城・桔梗城の廃止時期が重なることにある。「移封に同行しなかった家臣・奉公人が越後に残留し、禄・奉公先を失った」という社会状況は歴史的に十分あり得る。一方、「丸＝縄張り」は一般家紋学の定説ではなく、後世の象徴解釈の可能性を残す。</p>
 </section>
 
 <section>
-<div class="eyebrow">10 · Faith & culture</div><h2>妙高・弥彦・真珠院――家に残る信仰文化</h2>
-<div class="grid">
-<article class="card"><h3>妙高山参詣 <span class="evidence c">C</span></h3><p>「一生に一度は妙高山へ参る」という家伝。妙高は信濃と越後を結ぶ古い交通・山岳信仰の要衝でもある。</p></article>
-<article class="card"><h3>「二足四足」を避ける正月 <span class="evidence c">C</span></h3><p>正月に肉類を避ける家の習慣。弥彦地域にも「四足二足」を避ける伝承があり、文化的類似が注目される。</p></article>
-<article class="card"><h3>真珠院</h3><p>高橋家の墓地・菩提関係を追う重要拠点。畔屋集落内の萬福寺が日蓮宗である一方、高橋家には真珠院との強い関係が伝わる。</p></article>
-</div>
+<div class="eyebrow">13 · Yamagishi comparison</div><h2>弥彦黒滝城・山岸氏との比較</h2>
+<p>弥彦黒滝城では山岸氏の城主層が確認され、桔梗城は黒滝城主・山岸秀能の支配下になったとされる。和納山岸家には「上杉景勝家臣・黒滝城主山岸出雲守入道を祖とする」という家伝があり、上杉移封後に「上杉とともに動いた系統」と「越後に残ったと伝わる系統」の双方を考える余地がある。</p>
+<p>この山岸家のケースは、高橋家の「城がなくなり、置いていかれた」という口伝を検証する比較材料になる。ただし、山岸氏と畔屋高橋家が直接同じ家臣団にいたことはまだ証明されていない。</p>
+</section>
+
+<section id="chronology">
+<div class="eyebrow">14 · Chronology</div><h2>高橋姓・越後・畔屋を一本の年表で見る</h2>
+<table class="longtable">
+<thead><tr><th>年代</th><th>出来事</th><th>高橋家研究との関係</th><th>証拠</th></tr></thead>
+<tbody>
+<tr><td>約3万数千年前</td><td>新潟県内に旧石器時代の人類活動。</td><td>越後の人類史は高橋姓成立より遥かに古い。</td><td><span class="chip a">A</span></td></tr>
+<tr><td>7世紀後半</td><td>膳臣本流が高橋朝臣へ。</td><td>日本史上最古級の高橋氏。</td><td><span class="chip a">A/B</span></td></tr>
+<tr><td>9世紀</td><td>信濃国に高橋朝臣の記録。</td><td>畿内から信濃方面への高橋氏分布例。</td><td><span class="chip a">A</span></td></tr>
+<tr><td>1290頃</td><td>弥彦関係文書写しに高橋先生大夫。</td><td>越後高橋氏の中世存在。</td><td><span class="chip b">B</span></td></tr>
+<tr><td>1322頃</td><td>弥彦関係文書写しに高橋膳正大夫。</td><td>社家高橋氏の継続。</td><td><span class="chip b">B</span></td></tr>
+<tr><td>1343</td><td>萬福寺創建伝承。</td><td>畔屋城・中世集落の背景。</td><td><span class="chip b">B</span></td></tr>
+<tr><td>1533</td><td>萬福寺が日蓮宗へ改宗とされる。</td><td>畔屋宗教史の転換。</td><td><span class="chip b">B</span></td></tr>
+<tr><td>1574</td><td>「あせ屋」の文書記録。</td><td>畔屋地名の確実な戦国期史料。</td><td><span class="chip a">A/B</span></td></tr>
+<tr><td>1578–80</td><td>御館の乱。</td><td>北条毛利氏・畔屋・柏崎高橋家伝の重要舞台。</td><td><span class="chip a">A</span></td></tr>
+<tr><td>1579</td><td>景勝方が畔屋に進出。北条景広戦死、北条城開城。</td><td>藤井高橋家の「落城後移住」由緒と時代が重なる。</td><td><span class="chip a">A/B</span></td></tr>
+<tr><td>1598</td><td>上杉景勝が越後から会津へ。</td><td>「置いていかれた」「桔梗城廃城」の口伝と整合。</td><td><span class="chip a">A</span>＋<span class="chip c">C</span></td></tr>
+<tr><td>1616–1620</td><td>稲垣重綱の藤井城。</td><td>藤井高橋家の土着後に成立した別時代の城。</td><td><span class="chip a">A/B</span></td></tr>
+<tr><td>近世</td><td>畔屋で水田開発・村落成長。</td><td>高橋家の本家・分家・屋号形成の背景。</td><td><span class="chip b">B</span></td></tr>
+<tr><td>近代</td><td>貞吉が別高橋家から「やしき」へ養子入りしたと伝わる。</td><td>現在の直系を江戸期へ遡る最大の鍵。</td><td><span class="chip c">C</span></td></tr>
+<tr><td>1908</td><td>二二郎誕生。</td><td>家族資料で具体的に追える世代。</td><td><span class="chip a">A</span></td></tr>
+<tr><td>1945</td><td>公二、三郎の息子・勇が同世代に誕生。</td><td>親族関係と名の継承。</td><td><span class="chip a">A/C</span></td></tr>
+<tr><td>現代</td><td>畔屋・藤井・弥彦・北条・黒滝城・桔梗城を横断調査。</td><td>家伝と地域史を一代ずつ検証中。</td><td><span class="chip d">D</span></td></tr>
+</tbody>
+</table>
 </section>
 
 <section id="hypothesis">
-<div class="eyebrow">11 · Working hypotheses</div><h2>現段階の起源モデル</h2>
-<table class="evidence-table">
-<thead><tr><th>仮説</th><th>評価</th><th>理由</th></tr></thead>
+<div class="eyebrow">15 · Working hypotheses</div><h2>畔屋高橋家の起源――現段階の仮説順位</h2>
+<table class="evidence-table longtable">
+<thead><tr><th>仮説</th><th>現在の評価</th><th>支持材料</th><th>不足している証拠</th></tr></thead>
 <tbody>
-<tr><td>畔屋に古くから定着した在地高橋家</td><td><strong>最有力</strong></td><td>屋号・分家構造、地域の高橋姓集積、家族記憶が一致。</td></tr>
-<tr><td>藤井の北条毛利氏家臣高橋家と同族</td><td><strong>重点検証</strong></td><td>地理的近接と系図由緒が強い。直接接続は未確認。</td></tr>
-<tr><td>武士・奉公人から村役人・農民へ転化</td><td><strong>整合性高</strong></td><td>藤井高橋家の由緒と「残留」家伝が同型。</td></tr>
-<tr><td>弥彦黒滝城・桔梗城に奉公</td><td>家伝</td><td>1598年移封との年代整合は高いが、高橋姓の在番史料未確認。</td></tr>
-<tr><td>弥彦社家高橋家の分流</td><td>未証明</td><td>中世から高橋神主家・舎人家が存在。畔屋との系譜接続なし。</td></tr>
-<tr><td>古代高橋朝臣の直系</td><td>証明不能</td><td>文化的共通点はあるが、千年以上の系譜空白がある。</td></tr>
+<tr><td>柏崎・刈羽在地高橋家</td><td><strong>最有力</strong></td><td>屋号、村内高橋姓集積、墓地・親族圏。</td><td>江戸期以前の連続系図。</td></tr>
+<tr><td>藤井の北条毛利氏家臣高橋家と同族</td><td><strong>最優先検証</strong></td><td>近距離、系図由緒、武士→村役人化の構造。</td><td>藤井と畔屋を結ぶ具体的続柄・家紋・分家記録。</td></tr>
+<tr><td>北条城開城後の武士土着家</td><td><strong>整合性高</strong></td><td>1579年北条城開城と藤井高橋家由緒。</td><td>畔屋側の同時代高橋名。</td></tr>
+<tr><td>弥彦黒滝城・桔梗城奉公</td><td>重要家伝</td><td>1598年移封、桔梗城廃城、家紋伝承。</td><td>城番・家臣名簿に高橋姓。</td></tr>
+<tr><td>弥彦社家高橋家分流</td><td>比較仮説</td><td>中世から弥彦に高橋神主・舎人家。</td><td>畔屋との婚姻・分家文書。</td></tr>
+<tr><td>信濃・妙高経由移住</td><td>地理的に可能</td><td>古代〜中世の信越交通路。</td><td>高橋家個人の移住史料。</td></tr>
+<tr><td>古代高橋朝臣直系</td><td>現状証明不能</td><td>古代高橋氏の実在と「食」職掌。</td><td>千年以上の系譜空白。</td></tr>
 </tbody>
 </table>
-<div class="band"><span class="a"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
-<div class="legend"><span><i class="dot a"></i>A 一次・公的</span><span><i class="dot b"></i>B 地域史</span><span><i class="dot c"></i>C 家伝</span><span><i class="dot d"></i>D 仮説</span></div>
 </section>
 
 <section>
-<div class="eyebrow">12 · Next evidence</div><h2>次に決着をつける5つの資料</h2>
-<table>
-<thead><tr><th>優先</th><th>資料</th><th>確認したいこと</th></tr></thead>
+<div class="eyebrow">16 · Research plan</div><h2>次に決着をつける資料</h2>
+<table class="longtable">
+<thead><tr><th>優先</th><th>資料・場所</th><th>確認項目</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>「高橋三郎右衛門代々系図記」全文</td><td>藤井高橋家の世代・家紋・分家先</td></tr>
-<tr><td>2</td><td>藤井高橋家の墓・仏壇・家紋</td><td>一文字三ツ星の使用有無</td></tr>
-<tr><td>3</td><td>真珠院過去帳・畔屋墓碑</td><td>「やしき」「角屋」を江戸期へ遡る</td></tr>
-<tr><td>4</td><td>貞吉の戸籍・除籍</td><td>養子入り前の実家高橋・屋号を確定</td></tr>
-<tr><td>5</td><td>黒滝城・桔梗城関係文書</td><td>1598年前後の城番・家臣・奉公人に高橋姓がいるか</td></tr>
+<tr><td>1</td><td>「高橋三郎右衛門代々系図記」全文</td><td>初代以降の全世代、家紋、分家、婚姻、藤井での屋号。</td></tr>
+<tr><td>2</td><td>藤井高橋家の墓・仏壇・位牌</td><td>一文字三ツ星／丸に桔梗の使用有無。</td></tr>
+<tr><td>3</td><td>真珠院過去帳</td><td>畔屋高橋「やしき」「角屋」、石口・野嶋・斉藤などとの続柄。</td></tr>
+<tr><td>4</td><td>畔屋の宗門人別帳・検地帳・名寄帳</td><td>江戸期の高橋家戸数、屋敷地、分家形成。</td></tr>
+<tr><td>5</td><td>貞吉の戸籍・除籍</td><td>養子入り前の実父母、実家の高橋家・屋号。</td></tr>
+<tr><td>6</td><td>萬福寺縁起・過去帳</td><td>畔屋城主名の正字、城主家・家臣家の伝承。</td></tr>
+<tr><td>7</td><td>弥彦黒滝城・桔梗城関係文書</td><td>高橋姓の城番、奉公人、料理・儀礼担当者の有無。</td></tr>
+<tr><td>8</td><td>弥彦旧神主・旧舎人高橋家文書</td><td>柏崎・刈羽への分家・婚姻・土地関係。</td></tr>
 </tbody>
 </table>
 </section>
 
 <section id="sources">
-<div class="eyebrow">Sources</div><h2>主要公開資料</h2>
+<div class="eyebrow">Sources</div><h2>主要公開資料・参考先</h2>
 <div class="grid source-list">
-<article class="card"><h3>國學院大學・古代高橋氏</h3><p><a href="https://kojiki.kokugakuin.ac.jp/ujizoku/kashiwatenoomi/" target="_blank" rel="noopener">膳臣・高橋朝臣</a></p></article>
-<article class="card"><h3>國學院大學・弥彦</h3><p><a href="https://www2.kokugakuin.ac.jp/oardijcc/publications/Iyahiko_Kannushi.html" target="_blank" rel="noopener">旧神主高橋家文書</a><br><a href="https://www2.kokugakuin.ac.jp/oardijcc/publications/Iyahiko_Toneri" target="_blank" rel="noopener">旧舎人高橋家文書</a></p></article>
-<article class="card"><h3>柏崎市・北条城</h3><p><a href="https://www.city.kashiwazaki.lg.jp/kanko_bunka_sports/kanko/miru/shiseki_jinja_bukkaku/3/9860.html" target="_blank" rel="noopener">北条城跡</a></p></article>
-<article class="card"><h3>柏崎市発掘報告</h3><p><a href="https://sitereports.nabunken.go.jp/files/attach/54/54098/38287_1_%E6%9F%8F%E5%B4%8E%E5%B8%82%E3%81%AE%E9%81%BA%E8%B7%A1IX.pdf" target="_blank" rel="noopener">柏崎市の遺跡IX</a></p></article>
-<article class="card"><h3>弥彦村・城郭</h3><p><a href="https://www.vill.yahiko.niigata.jp/culture/?content=575" target="_blank" rel="noopener">黒滝城・桔梗城</a></p></article>
+<article class="card"><h3>古代高橋氏</h3><p><a href="https://kojiki.kokugakuin.ac.jp/ujizoku/kashiwatenoomi/" target="_blank" rel="noopener">國學院大學「膳臣」</a></p></article>
+<article class="card"><h3>弥彦旧神主高橋家</h3><p><a href="https://www2.kokugakuin.ac.jp/oardijcc/publications/Iyahiko_Kannushi.html" target="_blank" rel="noopener">國學院大學・旧神主高橋家文書</a></p></article>
+<article class="card"><h3>弥彦旧舎人高橋家</h3><p><a href="https://www2.kokugakuin.ac.jp/oardijcc/publications/Iyahiko_Toneri" target="_blank" rel="noopener">國學院大學・旧舎人高橋家文書</a></p></article>
+<article class="card"><h3>北条城</h3><p><a href="https://www.city.kashiwazaki.lg.jp/kanko_bunka_sports/kanko/miru/shiseki_jinja_bukkaku/3/9860.html" target="_blank" rel="noopener">柏崎市・北条城跡</a></p></article>
+<article class="card"><h3>藤井高橋家・遺跡</h3><p><a href="https://sitereports.nabunken.go.jp/files/attach/54/54098/38287_1_%E6%9F%8F%E5%B4%8E%E5%B8%82%E3%81%AE%E9%81%BA%E8%B7%A1IX.pdf" target="_blank" rel="noopener">柏崎市の遺跡IX</a></p></article>
+<article class="card"><h3>畔屋遺跡</h3><p><a href="https://sitereports.nabunken.go.jp/files/attach/54/54180/88688_1_%E6%9F%8F%E5%B4%8E%E5%B8%82%E3%81%AE%E9%81%BA%E8%B7%A130.pdf" target="_blank" rel="noopener">柏崎市の遺跡30</a></p></article>
 <article class="card"><h3>畔屋村</h3><p><a href="https://kotobank.jp/word/%E7%95%94%E5%B1%8B%E6%9D%91-3022541" target="_blank" rel="noopener">日本歴史地名大系「畔屋村」</a></p></article>
+<article class="card"><h3>黒滝城・桔梗城</h3><p><a href="https://www.vill.yahiko.niigata.jp/culture/?content=575" target="_blank" rel="noopener">弥彦村公式</a></p></article>
 <article class="card"><h3>萬福寺</h3><p><a href="https://news-nichiren.jp/category/report/area/%E5%8C%97%E9%99%B8%E6%95%99%E5%8C%BA/%E6%96%B0%E6%BD%9F%E8%A5%BF%E9%83%A8/page/7/" target="_blank" rel="noopener">日蓮宗側の由緒記事</a></p></article>
+<article class="card"><h3>真珠院・秀快上人</h3><p><a href="https://www.city.kashiwazaki.lg.jp/kanko_bunka_sports/kanko/miru/shiseki_jinja_bukkaku/2/9864.html" target="_blank" rel="noopener">柏崎市公式</a></p></article>
+<article class="card"><h3>弥彦の「四足二足」</h3><p><a href="https://www.vill.yahiko.niigata.jp/culture/?content=370" target="_blank" rel="noopener">弥彦村公式</a></p></article>
+<article class="card"><h3>妙高山信仰</h3><p><a href="https://www.city.myoko.niigata.jp/docs/6709.html" target="_blank" rel="noopener">妙高市公式</a></p></article>
 <article class="card"><h3>高橋姓分布</h3><p><a href="https://myoji-yurai.net/searchResult.htm?myojiKanji=%E9%AB%98%E6%A9%8B" target="_blank" rel="noopener">名字由来net</a> ※民間推計</p></article>
+<article class="card"><h3>柏崎市史資料集</h3><p><a href="https://ndlsearch.ndl.go.jp/books/R100000002-I000001716128" target="_blank" rel="noopener">近世篇1上</a><br><a href="https://ndlsearch.ndl.go.jp/books/R100000002-I000001720077" target="_blank" rel="noopener">近世篇1下</a></p></article>
 </div>
 </section>
 
-<div class="note"><strong>研究上の結論：</strong> 現時点で最も堅いのは「畔屋高橋家は柏崎・刈羽の在地高橋氏の一系統」という位置づけ。次に、北条毛利氏家臣から藤井へ土着した高橋家との接続を検証する。弥彦黒滝城・桔梗城、弥彦社家高橋家、古代高橋朝臣は、それぞれ魅力的な比較対象だが、系譜を飛び越えて直結させない。</div>
+<div class="note"><strong>公開研究の現在地：</strong> 「畔屋高橋家＝古代高橋朝臣」「畔屋高橋家＝弥彦社家高橋」「畔屋高橋家＝北条毛利氏家臣高橋」と断定できる段階ではない。最も堅いのは、柏崎・刈羽の在地高橋家として実証を積み上げ、藤井高橋家との接続を最優先で検証すること。そのうえで弥彦・黒滝城・桔梗城・古代高橋氏へ比較範囲を広げる。</div>
+</div></main>
 
-</div>
-</main>
 <footer><div class="wrap footerline"><span>© 2026 Shinobu Takahashi · Takahashi Family History</span><a href="#top">TOP ↑</a></div></footer>
 <script src="js/app.js"></script>
 </body></html>
