@@ -1,5 +1,5 @@
 (()=>{const d=document,doc=d.documentElement,body=d.body;
-const progress=d.createElement('div');progress.id='progress';body.prepend(progress);
+body.classList.add('js-ready');const progress=d.createElement('div');progress.id='progress';body.prepend(progress);
 const back=d.createElement('button');back.id='backTop';back.type='button';back.setAttribute('aria-label','ページ上部へ戻る');back.textContent='↑';body.append(back);
 const updateScroll=()=>{const m=doc.scrollHeight-doc.clientHeight;progress.style.width=(m?doc.scrollTop/m*100:0)+'%';back.classList.toggle('on',doc.scrollTop>520)};
 d.addEventListener('scroll',updateScroll,{passive:true});updateScroll();back.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
