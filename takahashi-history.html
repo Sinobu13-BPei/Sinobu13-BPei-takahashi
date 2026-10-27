@@ -158,13 +158,22 @@
   .history-page th{background:#eee;color:#111}
 }
 </style>
-</head>
+<link rel="canonical" href="https://sinobu13-bpei.github.io/Sinobu13-BPei-takahashi/takahashi-history.html"></head>
 <body class="history-page">
-<div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
-<a class="skip-link" href="#mainContent">本文へ移動</a>
-<nav><div class="wrap">
-<a href="index.html">HOME</a><a href="timeline.html">TIMELINE</a><a href="roots.html">ROOTS</a><a href="roots2.html">ROOTS II</a><a href="takahashi-history.html" aria-current="page">高橋一族史</a><a href="career.html">CAREER</a><a href="family.html">FAMILY</a><a href="family-archive.html">家族史ARCHIVE</a><a href="be-free.html">BE FREE</a><a href="about.html">ABOUT</a>
-</div></nav>
+<a class="skip-link" href="#top">本文へ移動</a>
+<nav class="topnav" aria-label="メインナビゲーション"><div class="wrap nav-inner">
+<a class="brand" href="index.html">BE FREE <small>高橋忍 自分史</small></a>
+<button class="nav-toggle" type="button" aria-controls="siteNav" aria-expanded="false">MENU</button>
+<div class="nav-scroll" id="siteNav">
+<a data-section="home" href="index.html">HOME</a>
+<a data-section="story" href="be-free.html">STORY</a>
+<a data-section="timeline" href="timeline.html">TIMELINE</a>
+<a data-section="map" href="atlas.html">MAP</a>
+<a data-section="roots" href="roots.html">ROOTS</a>
+<a data-section="career" href="career.html">CAREER</a>
+<a data-section="family" href="family.html">FAMILY</a>
+<a data-section="about" href="about.html">ABOUT</a>
+</div></div></nav>
 
 <header class="history-hero" id="top"><div class="wrap">
 <div class="eyebrow">Takahashi Family History · expanded research edition 2026</div>
@@ -499,13 +508,9 @@
 <script src="js/app.js"></script>
 <script>
 (function(){
-  const bar=document.getElementById('readingBar');
   const links=[...document.querySelectorAll('.history-nav a[href^="#"]')];
   const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
   function update(){
-    const h=document.documentElement;
-    const max=h.scrollHeight-h.clientHeight;
-    if(bar) bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
     let current=sections[0];
     for(const sec of sections){ if(sec.getBoundingClientRect().top<=150) current=sec; }
     links.forEach(a=>a.classList.toggle('active',current&&a.getAttribute('href')==='#'+current.id));
