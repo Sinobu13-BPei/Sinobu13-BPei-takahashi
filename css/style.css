@@ -150,7 +150,7 @@ tr:last-child td{border-bottom:0}
 
 footer{padding:36px 0;color:#8f8a82;font-size:.8rem;border-top:1px solid var(--line)}
 .footerline{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(10px);transition:.5s ease}.reveal.on{opacity:1;transform:none}
+.reveal{opacity:1;transform:none}.js-ready .reveal{opacity:0;transform:translateY(10px);transition:.5s ease}.js-ready .reveal.on{opacity:1;transform:none}
 
 @media(max-width:900px){
   .metric{grid-column:span 6}.chapter-map{grid-template-columns:repeat(3,1fr)}.icon-row{grid-template-columns:repeat(3,1fr)}
@@ -207,3 +207,6 @@ footer{padding:36px 0;color:#8f8a82;font-size:.8rem;border-top:1px solid var(--l
 .network-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
 @media(max-width:900px){.web-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.web-grid,.web-grid.compact{grid-template-columns:1fr}.web-card{min-height:0}.network-row{display:grid;grid-template-columns:1fr 1fr}}
+
+/* accessibility + overflow hardening */
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}h1,h2,h3,p,td,th,.card,.web-card{overflow-wrap:anywhere}body{overflow-x:hidden}
