@@ -70,4 +70,5 @@ function initChecklist(){const box=document.getElementById('checklist');let save
 function initReferences(){document.getElementById('referenceCards').innerHTML=DATA.references.map(x=>`<div class="card ref"><strong>${esc(x.label)}</strong><p>${esc(x.note)}</p>${x.url?link(x.url,'参照先を開く','btn small'):'<span class="tiny">リンク未確認</span>'}</div>`).join('');document.getElementById('extraRows').innerHTML=DATA.extras.map(x=>`<tr><td>${esc(x)}</td></tr>`).join('');}
 renderAll();initMap();renderSites();initChecklist();initReferences();
 </script>
+<!-- GitHub Pages publication refresh: 2026-11-18 JST; integrated Obon itinerary -->
 </body></html>
