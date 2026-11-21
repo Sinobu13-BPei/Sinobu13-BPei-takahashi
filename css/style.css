@@ -137,12 +137,7 @@ th,td{text-align:left;padding:11px 10px;border-bottom:1px solid var(--line);vert
 th{color:#ddd6ca;font-size:.76rem;letter-spacing:.04em;background:#15181d}td{color:var(--muted)}
 tr:last-child td{border-bottom:0}
 
-.map-shell{height:460px;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#101318}
-.map-fallback{height:100%;display:grid;place-items:center;padding:30px;text-align:center;color:var(--muted)}
 .map-note{font-size:.76rem;color:var(--muted);margin-top:7px}
-.leaflet-container{background:#101318}
-.map-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:12px}
-.map-legend div{border:1px solid var(--line);border-radius:12px;padding:10px;background:#14171b}.map-legend b{display:block;color:var(--accent);font-size:.76rem}
 
 .archive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .archive-card{display:block;padding:20px;border:1px solid var(--line);border-radius:16px;background:#15181d;text-decoration:none}
@@ -171,13 +166,11 @@ footer{padding:36px 0;color:#8f8a82;font-size:.8rem;border-top:1px solid var(--l
   main>section{padding:46px 0}.page-main section{padding:30px 0}
   .card,.card.big{grid-column:1/-1}.visual{padding:18px}.quote{padding:25px 26px}
   .chapter-map{grid-template-columns:1fr 1fr}.icon-row{grid-template-columns:1fr 1fr}
-  .route-strip{grid-template-columns:1fr 1fr}.lane{grid-template-columns:1fr}.map-shell{height:390px}
-  .map-legend{grid-template-columns:1fr 1fr}.archive-grid{grid-template-columns:1fr}
+  .route-strip{grid-template-columns:1fr 1fr}.lane{grid-template-columns:1fr}  .archive-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   body.nav-open .nav-scroll{grid-template-columns:1fr}
-  .metric{grid-column:1/-1}.chapter-map,.icon-row,.family-line,.map-legend{grid-template-columns:1fr}
-  .seat-layout{grid-template-columns:1fr 1fr}.page-title{font-size:2.55rem}.hero h1{font-size:3.7rem}
+  .metric{grid-column:1/-1}.chapter-map,.icon-row,.family-line,  .seat-layout{grid-template-columns:1fr 1fr}.page-title{font-size:2.55rem}.hero h1{font-size:3.7rem}
   .subnav{gap:4px;padding:7px}.subnav a{padding:7px 8px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.btn,.card-link,#backTop{transition:none}.reveal{opacity:1;transform:none}}
@@ -281,4 +274,25 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .hero h1{font-size:3.3rem}
   .page-title{font-size:2.3rem}
   .metric{padding:16px}
+}
+
+/* Compact life atlas */
+.place-section{padding-top:22px!important}
+.place-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.place-card{display:flex;flex-direction:column;gap:5px;min-width:0;padding:16px;border:1px solid var(--line);border-radius:16px;background:#15181d}
+.place-card.nature{background:linear-gradient(135deg,#162019,#14191a)}
+.place-card>span{color:var(--accent);font-size:.69rem;font-weight:800;letter-spacing:.08em}
+.place-card>b{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.04rem;line-height:1.4}
+.place-card>small{color:var(--muted);font-size:.76rem;min-height:1.4em}
+.place-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}
+.place-actions a{display:inline-flex;align-items:center;min-height:40px;padding:7px 10px;border:1px solid var(--line2);border-radius:999px;text-decoration:none;font-size:.74rem;color:#ddd7ce;background:#111419}
+.place-actions a:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:900px){.place-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){
+  .place-grid{grid-template-columns:1fr;gap:9px}
+  .place-card{padding:14px}
+  .place-card>small{min-height:0}
+  .place-actions{display:grid;grid-template-columns:1fr 1fr}
+  .place-actions a{justify-content:center;min-height:44px}
+  .place-actions a:only-child{grid-column:1/-1}
 }
