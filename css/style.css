@@ -296,3 +296,12 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .place-actions a{justify-content:center;min-height:44px}
   .place-actions a:only-child{grid-column:1/-1}
 }
+
+/* Books & memory */
+.book-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.book-card{padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#181b20,#14171b)}
+.book-card>span{color:var(--accent2);font-size:.68rem;font-weight:800;letter-spacing:.08em}
+.book-card h3{margin:.3em 0 .45em;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.08rem}
+.book-card p{margin:0;color:var(--muted);font-size:.88rem}
+@media(max-width:900px){.book-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.book-grid{grid-template-columns:1fr;gap:9px}.book-card{padding:15px}}
