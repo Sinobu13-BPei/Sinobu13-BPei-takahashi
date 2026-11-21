@@ -318,3 +318,25 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 .object-link:hover,.object-actions a:hover{border-color:var(--accent);color:var(--accent)}
 .object-actions{display:flex;gap:7px;flex-wrap:wrap}
 @media(max-width:650px){.object-grid{grid-template-columns:1fr;gap:9px}.object-card{padding:16px}.object-link,.object-actions a{min-height:44px}.object-actions{display:grid;grid-template-columns:1fr 1fr}.object-actions a{justify-content:center}}
+
+/* Faith & family */
+.faith-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.faith-card{padding:20px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#181b20,#14171b)}
+.faith-card.christian{background:linear-gradient(135deg,#151d25,#14171b 65%)}
+.faith-card.zen{background:linear-gradient(135deg,#201b15,#14171b 65%)}
+.faith-card.place{grid-column:1/-1;background:linear-gradient(135deg,#182019,#14171b 65%)}
+.faith-card>span,.legacy-note>span{display:block;color:var(--accent);font-size:.68rem;font-weight:800;letter-spacing:.11em}
+.faith-card h2,.legacy-note h2{font-size:1.55rem;margin:.25em 0 .45em}
+.faith-card p{color:var(--muted);margin:.5em 0}
+.faith-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}
+.faith-actions a{display:inline-flex;align-items:center;min-height:42px;padding:8px 12px;border:1px solid var(--line2);border-radius:999px;text-decoration:none;font-size:.76rem;color:#ddd7ce;background:#111419}
+.faith-actions a:hover{border-color:var(--accent);color:var(--accent)}
+.legacy-note{padding:22px;border:1px solid #655432;border-radius:18px;background:linear-gradient(135deg,#211d16,#14171b)}
+.legacy-note p{color:#d1cbc2}
+@media(max-width:650px){
+ .faith-grid{grid-template-columns:1fr;gap:9px}
+ .faith-card,.faith-card.place{grid-column:1;padding:16px}
+ .faith-actions{display:grid;grid-template-columns:1fr}
+ .faith-actions a{justify-content:center;min-height:44px}
+ .legacy-note{padding:18px}
+}
