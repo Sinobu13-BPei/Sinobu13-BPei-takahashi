@@ -340,3 +340,14 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
  .faith-actions a{justify-content:center;min-height:44px}
  .legacy-note{padding:18px}
 }
+
+/* Faith reflections */
+.faith-reflection{margin-top:14px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#14171b}
+.faith-reflection.work{background:linear-gradient(135deg,#171b22,#14171b 65%)}
+.faith-reflection h3{margin:.1em 0 .5em;font-size:1.05rem}
+.faith-reflection p{margin:.55em 0;color:#d4cec5;line-height:1.85}
+.faith-reflection strong{color:#f0d08c}
+@media(max-width:650px){
+  .faith-reflection{padding:15px 16px}
+  .faith-reflection p{font-size:.94rem;line-height:1.8}
+}
