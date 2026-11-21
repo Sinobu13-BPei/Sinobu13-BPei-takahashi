@@ -351,3 +351,12 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .faith-reflection{padding:15px 16px}
   .faith-reflection p{font-size:.94rem;line-height:1.8}
 }
+
+/* Annual prayer route */
+.prayer-route{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.prayer-stop{padding:17px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#181b20,#14171b)}
+.prayer-stop>span{display:block;color:var(--accent);font-size:.66rem;font-weight:800;letter-spacing:.1em}
+.prayer-stop h3{margin:.28em 0 .42em;font-size:1.02rem}
+.prayer-stop p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+@media(max-width:900px){.prayer-route{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.prayer-route{grid-template-columns:1fr;gap:8px}.prayer-stop{padding:15px}}
