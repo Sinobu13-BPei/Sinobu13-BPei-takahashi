@@ -212,3 +212,73 @@ footer{padding:36px 0;color:#8f8a82;font-size:.8rem;border-top:1px solid var(--l
 a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}h1,h2,h3,p,td,th,.card,.web-card{overflow-wrap:anywhere}body{overflow-x:hidden}
 
 .music-timeline{display:grid;gap:12px}.music-row{display:grid;grid-template-columns:150px 34px 1fr;gap:10px;align-items:stretch}.music-age{padding:18px 10px;text-align:right;font-family:Georgia,"Yu Mincho",serif;font-size:1.15rem;color:var(--accent)}.music-age small{display:block;margin-top:3px;color:var(--muted);font:500 .72rem/1.3 "Yu Gothic",sans-serif}.music-line{position:relative}.music-line:before{content:"";position:absolute;left:50%;top:0;bottom:-12px;width:1px;background:#3e454e}.music-line:after{content:"";position:absolute;left:50%;top:28px;width:13px;height:13px;border-radius:50%;border:2px solid var(--accent);background:var(--bg);transform:translate(-50%,-50%)}.music-row.now .music-line:after{background:var(--accent)}.music-card{padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:#15181d}.music-card h3{margin:.25em 0 .4em;font-size:1.15rem}.music-card p{margin:0;color:var(--muted)}.music-tag{font-size:.67rem;font-weight:800;letter-spacing:.1em;color:var(--accent2)}.privacy-pill{display:inline-block;margin-top:12px;padding:4px 8px;border:1px dashed #515963;border-radius:999px;color:#8f969f;font-size:.68rem}@media(max-width:650px){.music-row{grid-template-columns:92px 22px 1fr}.music-age{font-size:.95rem;padding-left:0}.music-card{padding:15px}}
+
+/* Dream journal */
+.dream-motif-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.dream-motif-grid div{padding:13px;border:1px solid var(--line);border-radius:14px;background:#171a1f}
+.dream-motif-grid b{display:block;color:var(--accent);font-size:.86rem}
+.dream-motif-grid span{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
+.dream-filter{display:flex;gap:8px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:2px 2px 9px;margin:12px -2px 18px;scrollbar-width:none}
+.dream-filter::-webkit-scrollbar{display:none}
+.dream-filter button{flex:0 0 auto;min-height:44px;padding:9px 14px;border:1px solid var(--line2);border-radius:999px;background:#15181d;color:#d6d0c7;cursor:pointer;scroll-snap-align:start}
+.dream-filter button.active,.dream-filter button:hover{border-color:var(--accent);color:var(--accent);background:#211d17}
+.dream-list{display:grid;gap:10px}
+.dream-entry{display:grid;grid-template-columns:118px 1fr;gap:12px;align-items:start}
+.dream-date{padding-top:14px;color:var(--accent);font:500 1rem/1.2 Georgia,"Yu Mincho",serif}
+.dream-card{border:1px solid var(--line);border-radius:16px;background:#14171b;overflow:hidden}
+.dream-card summary{list-style:none;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;min-height:76px;padding:15px 16px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.dream-card summary::-webkit-details-marker{display:none}
+.dream-card[open] summary{border-bottom:1px solid var(--line)}
+.dream-summary h3{margin:.28em 0 .34em;font-size:1.04rem}
+.dream-summary p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.6}
+.dream-open{min-width:48px;min-height:44px;display:grid;place-items:center;border:1px solid #4b525b;border-radius:999px;color:var(--accent);font-size:.72rem}
+.dream-card[open] .dream-open:after{content:"閉じる";font-size:.72rem}.dream-card[open] .dream-open{font-size:0}
+.dream-tags{display:flex;gap:5px;flex-wrap:wrap}
+.dream-tags span{font-size:.64rem;padding:2px 7px;border:1px solid #4b525b;border-radius:999px;color:#aeb5bd}
+.dream-full{padding:16px}
+.dream-full p{margin:0;color:#e0dbd2;line-height:1.85}
+.dream-note{margin-top:12px;padding:12px 13px;border-radius:12px;background:#101318;color:var(--muted);font-size:.82rem}
+.dream-section{padding-top:30px!important;padding-bottom:30px!important}
+@media(max-width:650px){
+  .dream-entry{grid-template-columns:1fr;gap:5px}
+  .dream-date{padding:0 2px;font-size:.9rem}
+  .dream-motif-grid{grid-template-columns:1fr 1fr}
+  .dream-card summary{padding:14px;min-height:72px}
+}
+@media(max-width:430px){
+  .dream-motif-grid{grid-template-columns:1fr}
+  .dream-summary p{font-size:.84rem}
+}
+
+/* iPhone-first UI */
+body{padding-bottom:env(safe-area-inset-bottom)}
+.topnav{padding-left:env(safe-area-inset-left);padding-right:env(safe-area-inset-right)}
+footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
+#backTop{right:max(14px,env(safe-area-inset-right));bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px))}
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.72}
+  .wrap{width:auto;margin-left:16px;margin-right:16px}
+  .nav-inner{min-height:54px}
+  .nav-toggle{min-height:44px;min-width:66px}
+  .nav-scroll a{min-height:44px;display:flex;align-items:center}
+  .page-main{padding-top:34px}
+  .page-title{font-size:clamp(2.2rem,12vw,3.15rem)}
+  .lead{font-size:.96rem;line-height:1.75;margin-bottom:18px}
+  .subnav{overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;margin:14px 0 20px;padding:7px}
+  .subnav::-webkit-scrollbar{display:none}
+  .subnav a{flex:0 0 auto;min-height:40px;display:flex;align-items:center}
+  .btn{min-height:44px;padding:10px 15px}
+  .card{padding:17px;border-radius:15px}
+  .visual{padding:16px}
+  .quote{padding:22px 20px;font-size:1.08rem}
+  .table-wrap{margin-left:-2px;margin-right:-2px}
+  main>section{padding:40px 0}
+  .page-main section{padding:26px 0}
+}
+@media(max-width:390px){
+  .wrap{margin-left:13px;margin-right:13px}
+  .hero-inner{padding:48px 0}
+  .hero h1{font-size:3.3rem}
+  .page-title{font-size:2.3rem}
+  .metric{padding:16px}
+}
