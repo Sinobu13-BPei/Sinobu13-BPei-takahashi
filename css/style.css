@@ -368,3 +368,17 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 .faith-common-grid h3{margin:.3em 0 .4em;font-size:1rem}
 .faith-common-grid p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
 @media(max-width:600px){.faith-common-grid{grid-template-columns:1fr;gap:8px}.faith-common-grid article{padding:15px}}
+
+/* Favorite words */
+.words-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.word-card{padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#181b20,#14171b)}
+.word-card.primary{background:linear-gradient(135deg,#211c14,#15181d 65%)}
+.word-card>span{display:block;color:var(--accent);font-size:.66rem;font-weight:800;letter-spacing:.1em}
+.word-card h3{margin:.32em 0 .48em;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.05rem;line-height:1.65}
+.word-card p{margin:0;color:var(--muted);font-size:.87rem;line-height:1.75}
+.word-card a{display:inline-block;margin-top:10px;color:#e8c475;text-decoration:none}
+.perspective-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.perspective-strip div{padding:12px;border:1px solid var(--line);border-radius:14px;background:#15181d;text-align:center}
+.perspective-strip b{display:block;color:var(--accent);font-size:.8rem}
+.perspective-strip span{display:block;margin-top:3px;color:var(--muted);font-size:.72rem}
+@media(max-width:700px){.words-grid{grid-template-columns:1fr}.perspective-strip{grid-template-columns:1fr 1fr}}
