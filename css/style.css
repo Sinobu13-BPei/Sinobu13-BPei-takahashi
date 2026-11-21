@@ -360,3 +360,11 @@ footer{padding-bottom:calc(36px + env(safe-area-inset-bottom))}
 .prayer-stop p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
 @media(max-width:900px){.prayer-route{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.prayer-route{grid-template-columns:1fr;gap:8px}.prayer-stop{padding:15px}}
+
+/* Shared themes across traditions */
+.faith-common-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.faith-common-grid article{padding:17px;border:1px solid var(--line);border-radius:16px;background:#15181d}
+.faith-common-grid article>span{display:block;color:var(--accent);font-size:.66rem;font-weight:800;letter-spacing:.1em}
+.faith-common-grid h3{margin:.3em 0 .4em;font-size:1rem}
+.faith-common-grid p{margin:0;color:var(--muted);font-size:.86rem;line-height:1.7}
+@media(max-width:600px){.faith-common-grid{grid-template-columns:1fr;gap:8px}.faith-common-grid article{padding:15px}}
